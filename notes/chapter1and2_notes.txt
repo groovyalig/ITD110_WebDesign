@@ -1,0 +1,760 @@
+*NEW PERSPECTIVES ON HTML5 & CSS3, 7TH EDITION, CAREY, CENGAGE LEARNING, 2016 (ISBN:978-1-305-50393-9)*
+
+COMMONLY USED CORE HTML ATTRIBUTES (p. 11)
+
+1. class = "text" : Defines the general classification of the element / mostly used to point to a class in a style sheet / can be used in HTML DOM with JavaScript
+
+	i.e. <p class="intro"> This is the first paragraph in the introduction... </p>
+
+2. dir = "ltr|rtl|auto" : Defines the text direction of the element content (Left to Right, Right to Left, or determined by browser) / Left or Right align (kinda)
+	i.e. <h1 dir="rtl"> Right-Aligned header </h1>
+
+3. id = "text" : unique identifier for that element / used often with HTML DOM
+	i.e. <p id="p1"> This is the first paragraph </p>
+
+4. lang = "text" : Specifies the language of the element content / use when page contains multiple languages
+	language tags: en (english), es (spanish), fr (french), etc. // there are also tags specific to the region (es-419 = South American spanish)
+	i.e. <html lang="en">
+
+5. style = "definition" : Defines the style or appearance of the element content / overrides CSS and <style> tags
+	i.e. <h1 style="color:blue;text-align:center"> Blue-Centered Header </h1>
+
+6. tabindex = "#" : Specifies the tab order of the page (when tab is used to navigate)
+	i.e. <p tabindex="3"> Tab 3 times to reach this paragraph. </p>
+
+7. title = "text" : Assigns a title to the element content / when you hover over it this text will appear in a little box
+	i.e. <h1 title="header"> Hover to see the word header. </h1>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML METADATA ELEMENTS (p. 15)
+
+1. head : Contains a collection of metadata elements that describe the document or provide instructions to the browser
+
+2. base : Specifies the document's location for use with resolving relative hypertext links
+
+3. link : Specifies an external resource that the document is connected to
+
+4. meta : Provides a generic list of metadata values (keywords, viewport, properties, character encoding, etc.)
+
+5. script : Provides programming code for programs to be run with the document / used to link JS file or identify client-side script
+
+6. style : Defines the display styles used to render the document content
+
+7. title : Stores the document's title or name, usually displayed in the browser title bar/browser tab
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ATTRIBUTES OF THE META ELEMENT (p. 16)
+
+1. charset = "encoding" : Specifies the character encoding used in the HTML document
+
+2. content = "text" : Provides the value associated with the http-equiv or name attributes
+	i.e. <meta name="keywords" content="these, are, your, search, engine, words" />
+
+3. http-equiv = "content-type|default-style|refresh" : Provides an http header for the documents content, default style, or refresh interval (in seconds) [***?***]
+	i.e. <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+4. name = "text" : Sets the name associated with the metadata
+	names: keywords, description, author, viewport, etc?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML SECTIONING ELEMENTS (p. 24)
+
+1. address : Marks contact information for an individual or group pertaining to the element it is nested in (body, article, etc.)
+
+2. article : Marks a self-contained composition in the document such as a newspaper story
+
+3. aside : Marks content that is related to a main article
+
+4. body : Contains the entire content of the (visible) document
+
+5. footer : Contains closing content that concludes an article or section
+
+6. h1-6 : Marks major headings with h1 being the largest/highest ranked
+
+7. nav : Marks a list of hypertext or navigation links
+
+8. section : Marks content that shares a common theme or purpose on the page
+
+9. header : contains opening content that introduces an article or section
+
+i.e.
+
+<body>
+	<header> Example Code </header>
+	<nav>
+		<ul>
+			<li> <a href="..."> Link 1 </a> </li>
+			<li> <a href="..."> Link 2 </a> </li>
+			<li> <a href="..."> Link 3 </a> </li>
+		<ul>
+	</nav>
+	<article>
+		<h1>...</h1>
+	</article>
+	<aside>...</aside>
+	<section>...</section>
+	<address>...</address>
+	<footer>...</footer>
+</body>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML GROUPING ELEMENTS (p. 27)
+
+1. blockquote : Contains content that is quoted from another source, often with a citation and indented on the page
+
+2. div : Contains a generic grouping of elements within the document
+
+3. dl : Marks a description list containing 1+ dt elements, each followed by a dd element
+
+4. dt : Contains a single term from a description list
+
+5. dd : Contains the description/definition associated with the term from a description list
+
+6. figure : Contains an illustration, photo, etc. that is cross-referenced elsewhere in the document
+
+7. figcaption : Contains the caption associated with a figure
+
+8. hr : Marks a thematic break such as a scene change or a transition to a new topic (often displayed as a horizontal line)
+
+9. main : Marks the main content of the document or application; only one main element per document
+
+10. ol : Contains an ordered list of items
+
+11. ul : Contains an unordered list of items
+
+12. li : Contains a single term from a ul/ol
+
+13. p : Contains the text of a paragraph
+
+14. pre : Contains a block of preformatted text in which line breaks and extra spaces are retained (often displayed in monospace font)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML TEXT-LEVEL ELEMENTS (p. 29)
+
+1. a : Marks content that acts as a hypertext link
+
+2. abbr : Marks an abbreviation or acronym
+
+3. b : Indicates a span of text to which attention should be drawn (text usually appears bold)
+
+4. br : Represents a line break within the grouping element
+
+5. cite : Marks a citation to an title or author of a creative work (usually appears italic)
+
+6. code : Marks content that represents computer code (usually displayed in monospace font)
+
+7. data : Associates a data value with the marked text - with the value attribute providing the value
+
+8. dfn : Markes a defined term for which a definition is given elsewhere in the document
+
+9. em : Indicated content that is emphasized or stressed (usually appears italic)
+
+10. i : Indicates a span of text that expresses an alternate voice or mood (usually appears italic)
+
+11. kbd : Marks text that represents user input, typically from a keyboard or voice command
+
+12. marks : Contains a row of text that is marked/highlighted for reference purposes
+
+13. q : Marks content that is quoted from another source
+
+14. s : Marks content that is no longer accurate or relevant (text is usually struck through)
+
+15. samp : Marks text that represents the sample output from a computer program or application
+
+16. small : Marks side comments (usually in small print)
+
+17. span : Contains a generic run of text within the document
+
+18. strong : Indicated content of strong importance or seriousness (text usually appears bold)
+
+19. sub : Marks text that should be treated as subscript
+
+20. sup : Marks text that should be treated as superscript
+
+21. time : Marks a time value or text sting
+
+22. u : Indicates text that appears statistically different from normal text (usually underlined)
+
+23. var : Marks text that is treated as a variable in a mathematical expression or computer program
+
+24. wbr : Represents where a line break should occur, if needed, for a long text string
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CHARACTER ENTITY REFERENCES (p. 34)
+
+&char; : insert a symbol based on character entity reference
+	i.e. &copy;
+
+&#code; : insert a symbol based on its character code
+	i.e. &#8226;
+
+&nbsp; : to insert a whitespace character
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML EMBEDDED ELEMENTS (p. 36)
+
+1. audio : Represents a sound clip or audio stream
+
+2. canvas : Contains programming scripts used to construct bitmap images and graphics
+
+3. embed : Contains general embedded content including application or interactive content
+
+4. iframe : Contains the contents of an external web page or internet resource
+
+5. img : Contains a graphic image retrieved from an image file
+	i.e. <img src="ct_logo.png" alt="Curbside Thai Logo">
+
+6. object : Contains general embedded content incluing application or interactive content
+
+7. video : Represents a video clip or video stream with captions
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+MAKING YOUR PAGE ACCESSIBLE WITH ARIA (p. 44)
+
+*Supplements HTML elements with additional attributes that provide clues as to the element's purpose
+	as well as provide information on the current status of every page element. (Useful for the visually impaired)
+
+	ex. <header role="text">...</header>
+
+Role Names:
+1. alert = Content with important and usually time-sensitive information
+
+2. application = A web app as opposed to a web document
+
+3. definition = A definition term or concept 
+
+4. dialog = An application window that will require user input
+
+5. log = a refion of data that is constantly modified/updated
+
+6. progress bar = Content that displays the progress status for ongoing tasks
+
+7. search = Content that provides search capability to the user
+
+8. seperator = A divider that separates one region of content from another
+
+9. timer = A region that contains a numerical counter reporting on elapsed time
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FOLDER PATHS (p. 60-61)
+
+Absolute : starts from the root folder and processes down the entire folder structure
+	i.e. c:\Users\Downloads\Folder_1\this_file.txt
+
+Relative : path is expressed relative to the location of the current document / if in the same folder, you only need the file name / if in subfolder, start there
+	i.e. Folder_1\that_file.txt -or- that_file.txt if theyre both in "Folder_1" rather than "Downloads"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+LINKING TO...
+
+A LOCATION IN A DOCUMENT (p. 63)
+
+1. Marking elements with an *id* attribute
+	i.e. <h1 id="header1"> Header </h1>
+
+   link with the following:
+	<a href="file#id"> content to link to </a>
+	i.e. <a href="this_file.txt#header1"> Click to go to the header </a>
+
+2. Anchors and the *name* attribute - before *id* was available (anchor is basically the id)
+	<a name="anchor">content</a>
+	i.e. <h2><a name="lunch"></a>Lunch Menu</h2>
+
+OTHER SOURCES (p. 64)
+
+1. fax : A FAX phone number
+
+2. file : A document stored locally on a users computer
+
+3. ftp : A document stored on an FTP server
+
+4. geo : A geophysical coordinate
+
+5. http : A resource on the web
+	i.e. <a href="http://server/path/filename#id"> Click Link </a>
+
+6. https: A resource on the web accessed over a secure encrypted connection
+	i.e. < a href ="https://server/path/filename#id"> Click Link </a>
+
+7. mailto : An e-mail address
+	i.e. <a href="mailto:alissahardison@gmail.com"> E-Mail Me </a>
+
+8. tel : A telephone number
+	i.e. <a href="tel:+17573433541"> Call Me </a>
+
+9. sms : A mobile text message sent via the Short Message Service
+
+**CSS File : <link href="file" rel="stylesheet" />
+**JS File: <script src="file"></script>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+WORKING WITH HYPERTEXT ATTRIBUTES (p. 68)
+
+1. href = "url" : Provides the url of the hypertext link
+
+2. target = (_blank|_parent|_self|_top) : Specifies where to open the linked document
+
+3. download = "filename" : Indicates the link should be downloaded as a file, where filename is the name given to the downloaded file
+
+4. rel = "type" : Provides the relationship between the linked document and the current page
+
+5. hreflang = "lang" : Indicates the language of the linked document
+
+6. type = "mime-type" : Indicates the media type of the linked document
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+									CSS NOTES !!!
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXPLORING STYLE RULES (p. 90)
+
+The selector identifies the element/group of elements within the document / can be comma separated so that the property: pairs apply to multiple elements
+The property: value pairs specify the style properties and the values applied to the selector
+
+general form:
+
+	selector{
+		property1: value1;
+		property2: value2;
+		...
+	}
+
+i.e. 
+	h1, h2 {color:red;}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+VENDOR PREFIXES (p. 91)
+
+Browser extensions are an extended library of style properties in the browser
+
+Vendor prefix – Indicates the browser vendor that created and supports the style property
+(Will only change design in that browser if added)
+
+-khtml-		KHTML		Konqueror
+-moz-		Mozilla		Firefox, Camino
+-ms-		Trident		Internet Explorer
+-o-		Presto		Opera, Nintendo Wii browser
+-webkit-	WebKit		Android Browser, Chrome, Safari
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EMBEDDED STYLE SHEETS (p. 91)
+
+They are inserted directly into the HTML file as metadata by adding the following element to the document head
+where style rules are the different rules embedded in the HTML page
+
+general form:
+	<style>
+		selector{
+			property1: value1;
+			property2: value2;
+			...
+		}
+	</style>
+
+i.e.
+	<style>
+		h1{
+			color: red;
+			text-align: center;
+		}
+	</style>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INLINE STYLES (p. 92)
+
+general form:
+
+	<element style="property: value; ..."> content </h1>
+i.e.
+	<h1 style="color: red; ">Sports</h1>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+COMENTS IN VARIOUS LANGUAGES
+
+HTML5: <!-- comment within these symbols -->
+
+CSS3 & JavaScript (multi-line): /* comment within these symbols */
+
+JavaScript (single-line): //comments after these symbols
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+COLORS IN CSS! (p. 97)
+
+1. Color Names (147 color names supported)
+	i.e. red, orange, khaki, black, beige, etc.
+
+2. RGB (0-255, 0-255, 0-255) or (0-100%, 0-100%, 0-100%)
+	i.e. rgb(147, 63, 0)
+	**can add opacity (0 is transarent, 1 is opaque): rgba(#,#,#,0-1)
+
+3. Hexadecimal (#redgreenblue)
+	i.e. rgb(#FFFF00)
+	**can add opacity: rgba(#hexvalue,0-1)
+
+
+HSL COLOR VALUES – introduced in CSS3, and based on a color model in which each color is determined by Hue, Saturation, and Lightness
+
+a. Hue – Tint of a color, represented by a direction on a color wheel
+		red = 0 / green = 120 / blue = 240
+
+b. Saturation – Measures the intensity of a color and ranges from 0% (no color) up to 100% (full color)
+
+c. Lightness – Measures the brightness of a color and ranges from 0% (black) up to 100% (white)
+
+	i.e. hsl(38, 44%, 69%)
+	**can add opacity: hsla(#,%,%,0-1)
+
+example:
+	body{
+		color: rgb(12, 25, 83)
+		background-color: hsla (69, 69%, 69%, .69)
+	}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CONTEXTUAL SELECTORS (p. 108-109)
+
+Specifies the context under which a particular page element is matched
+
+Context is based on the hierarchical structure of a document, whichs involves the relationships between a parent element containing one or more child elements
+and within those child elements several levels of descendant elements
+
+The format is parent descendant {styles}
+
+1. * : Matches any element
+
+2. elem : Matches the element elem located anywhere in the document
+
+3. elem1, elem2, ... : Matches any of the elements listed
+
+4. parent descendant : Matches the descendant element that is nested wthin the parent element at some level (the whole path to that element)
+
+5. parent > child : Matches the child element that is a child of the parent element
+
+6. elem1 + elem2 : matches elem2 that comes directly after elem1
+
+7. elem1 ~ elem2 : matches elem2 that follows elem1
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ATTRIBUTE SELECTORS (p. 111-112)
+
+Selectors also can be defined based on attributes and attribute values within elements. // we can use any attribute as a selector
+
+id – Identifies specific elements within the document / can be entered either as #title or h1#title in the style sheet
+	i.e. <element id="id">Content</element>
+		element#id{property:value};
+
+class– Identifies a group of elements that share a similar characteristic or property
+	*to apply the style to the h1, use : h1.intro {color: blue;}	
+	*to apply the style to the entire class, use : .intro {color: blue;}
+
+	i.e. <h1 class="intro">Tri and Succeed Sports</h1>
+        	<p class="intro">….</p>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FONTS (p. 115-119)
+
+*Combining all text formatting in a single style (p. 128):
+	font: style variant weight size/height family;
+		i.e. font: italic small-caps bold 1.5em/2em Arial, sans-serif;
+
+1. Web Safe Fonts – these are fonts that will be displayed mostly the same way in all operating systems and devices
+   Web fonts require a user to download a file, often for a fee. To access and load a web font, add the @font-face rule to the style sheet
+   Once a web font is defined using the @font-face rule, it is included in the font stack
+
+	***Arial, Arial Black, Century Gothic, Comic Sans, Courier New, Georgia, Impact, Lucida Console, Lucida Sans Unicode, Palatino Linotype,
+		Tahoma, Times New Roman, Trebuchet MS, & Verdana
+
+	general syntax to include @font-face:
+
+	@font-face {
+  		font-family: name;
+  		src: url (‘url1’) format (‘text1’),
+  		url (‘url2’) format (‘text2’),
+		…;
+		descriptor1: value1;
+		descriptor2: value2;
+		…
+	}
+
+	name = the name of the font / url = location of the font definition file / text = optional text description of the font format /
+	descriptor1:  value1; pairs = optional style properties of the font
+
+2. Specific font – Identified by name and based on a font definition file stored in a user’s computer or accessible on the web
+	i.e. Times New Roman, Helvetica
+
+3. Generic font – Describes the general appearance of the characters in the text / does not specify any particular font
+   Good Practice when creating the font stack is to list specific fonts first, then to have at least one generic font at the end
+
+	Generic Font Styles:
+
+	a. serif - small ornamentation appears at the tail end of each letter
+	b. sans-serif - has no serif ornamentation
+	c. monospace - all letters have an equal width (often used to display code)
+	d. cursive - mimics handwriting with highly stylized elements and flourishes (best in small doses)
+	e. fantasy - highly ornamental / used for page decoration (never use for body text)
+
+
+general structure:
+
+    font-family: fonts;
+
+	i.e. font-family: Verdana, Geneva, sans-serif;
+
+Font Stack: The browser uses whichever typeface is the first available in the list
+
+.woff & .ttf are the font file types
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FONT SIZE (p. 121)
+
+font-size: size;
+
+1. Absolute Unit - fixed in size regardless of the output device (only used in print media)
+	i.e. body {font-size: 12pt;}
+
+2. Relative Unit - expressed relative to the size of the other objects within the web page or to the display properties of the device itself
+	a. pixels : h1 {font-size: 10px;}
+		*relative per device because of varying ppi displays
+
+	b. percentage : h1 {font-size: 200%;}
+		*relative to parent element of that which it is used for
+
+	c. ems : h1 {font-size: 2em;}
+		* relative to the immediate surrounding text (in parent element//siblings)
+		*acts same as % (1em = 100%) // pref. unit bc its easier to develop pgs. with diff elements that have consistent relative font sizes
+
+	d. rems : h1 {font-size: 1rem;}
+		*all font sizes are always expressed relative to the font size used in the html element, not the surrounding text or parent element
+
+Sizing Keywords - instead of assigning a direct size
+	xx-small, x-small, small, medium, large, x-large, xx-large, larger (relative), or smaller (relative)
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SPACING AND INDENTATION (p. 125)
+
+1. Kerning - space between each letter // value default is 0px / + inc. space, - dec. space
+	letter-spacing: value;
+		i.e. h1 {letter-spacing: 2.2em;}
+
+2. Tracking - space between words // value default is 0px / + inc. space, - dec. space
+	word-spacing: value; 
+		i.e. h1 {word-spacing: 2.2em;}
+
+3. Leading - the line height // value default is 1.2em (gives 20% of font height as space)
+	line-height: size;
+		i.e. h1 {line-height: 2.2em;}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FONT STYLES (p. 127)								
+
+1. font-style: type; (1)
+	a. normal
+	b. italic - a little more pronounced with some fonts
+	c. oblique - a little less pronounced with some fonts
+
+2. font-weight: weight; (3)
+	a. normal - for non-boldface text
+	b. bold - for boldface text
+	c. bolder or lighter - relative to surrounding content
+	d. 100 (xt light) to 900 (xt heavy) - precise weight values in increments of 100 (difficult to distingish)
+
+3. text-decoration: type;
+	a. none - no deco
+	b. underline
+	c. overline
+	d. line-through
+		*multiple can be used in one style
+
+4. text-transform: type;
+	a. capitalize - first letter of each word
+	b. uppercase - whole text
+	c. lowercase - whole text
+	d. none - no effect
+
+5. font-variant: type;(2)
+	a. normal - none
+	b. small-caps - small capital letters (emphasis without standing out)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ALIGNMENT (p. 128)
+
+Horizontal:
+	text-align: alignment;
+	
+		a. left - aligns to the left edge of the element
+		b. right - aligns to the right edge of the element
+		c. center - aligns the middle of the element with the center of the parent element
+		d. justify (right and left)
+
+Vertical:
+	vertical-align: alignment;
+
+		a. baseline - aligns baseline of element with baseline of parent element
+		b. bottom  - aligns the bottom of the element with the bottom of the lowest element in the line
+		c. middle - aligns middle of the element with the middle of the surrounding content in the line
+		d. sub - subscripts the element
+		e. super - superscripts the element
+		f. text-bottom - aligns bottom of the element with the bottom of the text in the line
+		g. text-top - aligns top of the element with the top of the text in the line
+		h. top - aligns top of the element with the top of the tallest object in the line
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FORMATTIG LISTS (p. 134)
+
+list-style-type: type;
+
+	1. disc OR circle : colored circle OR open circle
+	2. square : colored square
+	3. decimal : counting numbers (i.e. 1, 2, 3...)
+	4. decimal-leading-zero : counting numbers led by 0 (i.e. 01, 02, 03...)
+	5. lower-roman OR upper-roman : lowercase roman numerals (i, ii, iii...) OR uppercase roman numerals (I, II, III...)
+	6. lower-alpha OR upper-alpha : lowercase letters (a, b, c...) OR uppercase letters (A, B, C...)
+	7. lower-greek OR upper-greek : lowercase greek letters OR uppercase greek letters
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+USING AN IMAGE FOR A LIST MARKER (p. 137)
+
+list-style-image: url(url)
+	*url can be an absolute/relative path to a file or a link
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+LIST MARKER POSITION (p. 138)
+
+list-style-position: position;
+
+	1. outside (default) - outside the block
+	2. inside - inside the block
+
+MARGINS AND PADDING 
+	
+	1. padding space - (p. 140-141)
+
+		a. padding: size; (1 #)
+			i.e. padding: 10px;
+
+		b. padding: top right bottom left; (4 #s)
+			i.e. padding: 10px 5px 10px 5px;
+
+		c. padding: top/bottom left/right; (2 #s)
+			i.e. padding: 10px 5px;
+
+		d. (individually) padding-*side*: size;
+			*side = top, right, bottom, or left
+			i.e. padding-right: 5px;
+
+	2. border - same as padding and margin format (p. 142)
+		
+	3. margin space - (p. 142)
+
+		a. margin: size; (1 #)
+			i.e. margin: 10px;
+
+		b. margin: top right bottom left; (4 #s)
+			i.e. padding: 10px 5px 10px 5px
+
+		c. margin: top/bottom left/right; (2 #s)
+			i.e. padding: 10px 5px
+
+		d. (individually) padding-*side*: size;
+			*side = top, right, bottom, or left
+			i.e. padding-right: 5px
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PSEUDO-CLASSES AND PSEUDO-ELEMENTS (p. 145 & 149)
+
+1. structural pseudo-class (p. 145) = classification of an element based on its current status, position, or use in the doc.
+	element: pseudo-class {style}
+	
+	1. root - top element in doc hierarchy
+	2. empty - an element with no content
+	3. only-child - an element with no siblings in the same parent
+	4. first-child - the first child of the parent element
+	5. last-child - the last child of the parent element
+	6. first-of-type - the first descendant of the parent that matches the specific type
+	7. nth-of-type(n) - the nth element of the parent of the specified type
+	8. nth-last-of-type(n) - the nth from the last element of the parent of the specified type
+	9. last-of-type - the last descendant of the parent that matches the specific type
+	10. only-of-type - an element that has no siblings of the same type
+	11. lang(code) - te element that has a specified language *indicated by code (html)
+	12. not(selector) - an element not matching the specified selector
+
+2. dynamic pseudo-class (p. 149) = changes based on actions of the user / used with hypertext
+	element: pseudo-class {style}
+
+	1. link - the link has not yet been visited
+	2. visited - the link has been visited
+	3. active - the element is in the process of being activated/clicked by the user
+	4. hover - the mouse pointer is hovering over the element
+	5. focus - th element is reveiving the focus of the keyboard or mouse pointer
+
+3. pseudo-element () = an obj that exists only in the rendered page (i.e. first letter in a paragraph)
+	element::pseudo-element {style}
+
+	1. first-letter
+	2. first-line
+	3. before // format = element::before {content: text;}
+	4. after // format = element::after {content: text;}
+
+		*values of content property
+		a. none - sets the content to an empty text string
+		b. counter - displays a counter value
+		c. attr(attribute) - displays the value of the selector's attribute
+		d. text - displays the specified text
+		e. open-quote - displays open quote
+		f. close-quote - displays close quote
+		g. no-open-quote - removes an opening quote if prev. specified
+		h. no-close-quote - removes a closing quote if prev. specified
+		i. url(url) - displays the content of the media (img, vid, etc.) from the file located at url
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSERTING (decorative) QUOTATION MARKS (p. 154)
+
+*blockquote and q elements are for quoted material
+
+TO ESTABLISH WHAT TYPE OF QUOTES WILL BE USED:
+
+element {quotes: "open1" "close1" "open2" "close2"}
+	*quotes can be "\201C" "201D" "2018" "2019" etc.
+
+TO ACTUALLY INSERT THE QUOTES:
+
+element::before {content: open-quote;}
+element::after {content: close-quote;}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

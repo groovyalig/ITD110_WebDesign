@@ -1,0 +1,265 @@
+											----------------CHAPTER 4 NOTES !!-----------------
+
+FIGURE BOXES (p. 260)
+
+*Often used for, but not limited to, images; can also use for text.
+
+<figure>
+	image
+	<figcaption> caption </figcaption>
+</figure>
+
+GRAPHIC FILE FORMATS
+
+- vector image : made of lines and curves based on mathematical functions // can resize without losing image clarity
+	* SVG (Scalable Vector Graphics) - XML markup languagethat can be created using a text editor and the SVG language
+
+- bitmap image : image comprised of pixels // larger file size than vector
+	* GIF (Graphic Interchange Format) - oldest standard / limited to 256 colors / support transparent colors / used for animated images
+	* JPEG (Joint Photographic Experts Group) - most popular photo format / over 16 million colors / can be compressed / no transparent colors or animations
+	* PNG (Portable Network Graphics) - designed to replace GIFs / millions of colors including transparent / can be compressed / contain color correction
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BACKGROUND STYLES (p. 264)
+
+selector {background-image: url(url);}
+	- url specifies the name and location of the file
+
+*Tiling - the process of repeating an image until the background is filled 
+	* background-repeat: type;
+		types = repeat (default), repeat-x, repeat-y, no-repeat, round, and space
+
+{background-attachment: type;}
+	- types: scroll - (default)
+		 fixed - used for watermarks = translucent graphics displayed behind some content with a message that the content is copyrighted/a draft
+		 local - like scroll but used for elements (i.e. scroll boxes) to allow the element background to scroll with the element content
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BACKGROUND IMAGE POSITION (p. 267)
+
+{background-position: horizontal vertical;}
+{background-position: coordinate;}
+{background-position: hword vword}
+
+* h/v are coordinates within the element background expressed using CSS units o fmeasure or as a percent of the element's width and height
+* coordinate is used if image is same distance from left and top
+* hwords are left, center, and right // vwords are top, center, and bottom
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DEFINING THE EXTENT OF THE BACKGROUND (P. 268)
+
+{background-clip: type;}
+* specifies the extent over which the background is spread
+
+	types
+	- content-box: extend only through the content
+	- padding-box: extend through the padding space
+	- border-box: extend through the border space
+
+{background-origin: type;}
+*defines how positions are measured on the background
+
+	types = same as background-clip
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SIZING AND CLIPPING AN IMAGE (p. 269)
+
+background-size: width height;
+	* measured in CSS units or as a percent of the element
+		-OR-
+	- auto: browser sets height and width based on dimensions of original image
+	- cover: resizes image to cover all of the element background - still retaining image proportions (could crop image)
+	- contain: contains image in element, even if not all of background is covered
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BACKGROUND PROPERTY (p. 270)																	*****
+
+{background: color url(url) position / size repeat attachment origin clip;}
+
+	* attachment specifies whether the image scrolls or is fixed
+	** if using multiple background images or colors, separate them with a comma and place a semicolon after the last one
+		they will be rendered from bottom to top/last to first
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BORDERS
+
+{border: width style color;}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BORDER WIDTH and COLOR (p. 274)
+
+{border-side-width: width;} = 1 value			//		{border-side-color: color;} = 1 value
+			           * side = top, right, bottom, or left*
+
+{border-width: top right bottom left;} = 4 values	//		{border-color: top right bottom left;} = 4 values			
+
+{border-width: top&bottom left&right} = 2 values	//		{border-width: top&bottom left&right} = 2 values
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BORDER DESIGN (p. 274)
+
+{border-side-style: width;} = 1 value
+	* side = top, right, bottom, or left
+	* styles = solid, dashed, dotted, double, outset, inset, groove, ridge
+
+{border-style: top right bottom left;} = 4 values		
+
+{border-style: top&bottom left&right} = 2 values
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATING ROUNDED BORDERS (p. 277)
+
+{border-radius: top-left top-right bottom-right bottom-left;}
+{border-radius: top-left&bottom-right top-right&bottom-left;}
+{border-corner-radius: radius;}	-> {border-corner-radius: horizontal vertical;}
+	* corner is top-left... etc.	*for a non-circular border
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+APPLYING A BORDER IMAGE (p. 281)
+
+Border based on a graphic image. The graphic image is sliced into 9 sections: 4 corners, 4 sides, & the centerpiece - which is discarded
+
+{border-image: url(url) slice repeat;}
+* slice = width or height of slices used to create the corners // can do "top right bottom left" if you want to do differet size corners n stuff -OR- "top/bottom left/right"
+* repeat = 
+	- stretch: slices stretch to fill each side
+	- repeat: slices tile to fill each side
+	- round: slices are tiled (and rescaled if they dont fit w/ an interger #)
+	- space: slices are tiled (and space is added if they dont fit w/ interger #)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATING DROP SHADOWS
+
+TEXT SHADOWS (p. 288)
+{text-shadow: color offsetX offsetY blur,
+	      color offsetX offsetY blur;}	**if using multiple shadows, separate with commas like so
+
+BOX SHADOWS (p. 290)
+{box-shadow: color offsetX offsetY blur spread,
+	     color offsetX offsetY blur;}	**
+
+*spread determines how wide it stretches
+*inset keyword adds the shadow to the interior of the element 
+	i.e. box-shadow: inset red 10px 0px 15px;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+APPLYING A COLOR GRADIENT (p. 296)
+
+-Creating a Linear Gradient
+
+	{...:linear-gradient(direction color1,color2,...)}
+	ex. body{backgroung:linear-gradient(red,black,blue)}
+
+	*default direction is top to bottom, but you can change it with the direction property
+		-ex. to left, to bottom right, to top, 270deg, etc.
+
+	*can stop the colors at specific points with #px or #% after the color, before the comma
+
+-Creating a Radial Gradient (p. 301)
+
+	color starts at a center point and swirls out as either an ellispe or a pure circle
+
+	radial-gradient(shape size at position, color-stop1, color-stop2,...)
+	ex. body{background: radial-gradient(120px 180px at 25% 75%, red 45%, yellow, blue 10%)}
+
+-Repeating Gradient (p. 305)
+
+	repeating-linear-gradient(paramaters)
+	repearing-radial-gradient(parameters)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATING SEMI-TRANSPARENT OBJECTS (p. 307)
+
+selector{opacity: value;}
+	where value is 0(transparent) - 1(opaque)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TRANSFORMING PAGE OBJECTS (p. 312)
+
+	{transform: effect(parameters)}
+
+2D Transformation Functions:
+- translate (offX, offY) : moves object // positive intergers are right and down / negative intergers are left and up
+- translateX (offX) : moves object
+- translateY (offY) : moves object
+- scale (x, y) : resizes object by a factor of x horizontally and y vertically
+- scaleX (angleX) : resizes object horizontally
+- scaleY (angleY) : resizes object vertically
+- skew (angleX, angleY) : skews the object by angleX degrees horizontally and angleY degrees vertically
+- skewX (angleX) : skews the object by angleX degrees horizontally 
+- skewY (angleY) : skews the object by angleY degrees vertically
+- rotate (angle) : rotates the object by angle degrees clockwise/ negative values rotate counter clockwise
+- matrix (n1, n2, n3, n4, n5, n6) : applies a 2D transformation based on a matrix of 6 values
+
+3D Transformation Functions:
+- translate3d (offX, offY, offZ): shifts the object horizontally, vertically, and along the x-axis
+- translateX (offX) : moves object along x axis
+- translateY (offY) : moves object along y axis
+- translateZ (offZ) : moves object along z axis
+- rotate3d (x, y, z, angle) : rotates the obect around the 3d vector (x, y, z) at a direction of angle
+- rotateX (angle) : rotates object around x axis
+- rotateY (angle) : rotates object around y axis (i.e. 180deg - the deg is important)
+- rotateZ (angle) : rotates object around z axis
+- scale3d (x, y, z) : resizes the object by a factor of x horizontally, y vertically, and z along the z axis
+- scaleX(x) : resizes object along x axis
+- scaleY (y) : resizes object along y axis
+- scaleZ (z) : resizes object along z axis
+- perspective (p) : sets the size of the perspective // lower values have more extreme distortion
+- matrix3d (n1, n2, n3, ... n14, n15, n16) : applies a 3d transformation based on matrix of 16 values
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CSS FILTERS (p. 321)
+
+selector {-webkit-filter:effect(parameters);
+	   filter: effect(parameters);}
+
+Functions:
+- blur (length) : length defines the size of the blur in pixels
+- brightness (value) : values 0-1 decrease brightness, values 1+ increase brightness
+- contrast (value) : values 0-1 decrease contrast, values 1+ increase contrast
+- drop-shadow (offsetX offsetY blur color) : adds a drop shadow to the image
+- grayscale (value) : values 0-1 with one being completely grayscale
+- hue-rotate (angle) : rotates based on color wheel
+- invert (value) : values 0-1 with one being completely inverted
+- opacity (value) : values 0-1 with one being completely opaque
+- saturate (value) : values 0-1 decrease saturation, values 1+ increase saturation
+- sepia (value) : values 0-1 with one being completely sepia
+- url(url) : loads an SVG filter file from url
+
+***IF USING MULTIPLE FILTERS, DO NOT SEPARATE WITH COMMAS OR THEY WILL NOT WORK
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+WORKING WITH IMAGE MAPS (p. 324)
+
+-Client Side Image Maps
+
+	<map name="name">
+		hotspots
+	</map>
+
+each hotspot: 
+	<area shape="shape" coords="coordinates" href="url" alt="text">
+
+	* shape = rect, circle, poly, default (rest of photo not covered by other hotspots)
+		- rect (left, top, right, bottom) where left,top are the top left corner and right, bottom are the bottom right corner
+		- circle (x, y, radius) where x and y are the center point
+		- poly (x1, y1, x2. y2, x3, y3....) where x#,y# set the coordinates for each vertex in the shape
+		- default (0,0, width, height) where width and height are the size of the full image
+
+
+****MUST ADD usemap="#map" TO THE IMAGE YOU ARE ATTACHING THE MAP TO !! OR ELSE IT WON'T WORK
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------

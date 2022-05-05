@@ -1,0 +1,1735 @@
+									
+									- Certification Notes -
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Chapter 1: Markup Language and Site Dev. Essentials
+
+---Web Site Development Principles---
+
+You Need: knowledge of markup languages, a talent for design, an understanding of business concerns & web development issues (copyright, planning, accesibility, etc.)
+
+---Project Management & The Web Development Cycle:---
+
+ - Create and document an initial Web site plan.
+ - Obtain relevant input from stakeholders.
+ - Communicate the Web site plan.
+ - Consider technical and non-technical concerns.
+ - Develop the site.
+ - Test for Functionality
+ - Get the Site Approved
+ - Publish the site.
+ - Manage the site.
+
+
+---Developing Accesible Web Pages:---
+
+ - Americans with Disabilities Act (ADA) of 1990 - Protects civil rights of disabled people; includes mandates for equal employment opportunities, accomodations, etc.
+		It's a broad application of accessibility standards to influence commercial and social practices related to persons with disabilities.
+		Significant compliance failures are subject to financial penalties. Must make your site handi-accesible!
+		The standards are officially known as the U.S. Department of Justice ADA Standards for Accessible Design
+		The Justice Department generally punishes only violators who exhibit long-term, wanton disregard for the standards
+		 - Ensure that all images have text-based descriptions so that sight-impaired visitors can access sites through screen-reader technology.
+		 - Provide text-based alternatives to all non-text content
+		 - Provide forms that are easily read by screen-reading technology
+
+ - Web Content Accessibility Guidelines (WCAG) - Developed by the Web Accessibility Initiative (WAI) which was created by the W3C.
+		Provide a universal set of standards promoting accessibility.
+		Works with worldwide organizations in 5 main areas: tech, guidelines, tools, education & outreach, and research & development.
+		WAI aims to ensure that core technologies used on the Web (HTML, CSS, DOM, etc.) are equally accesible to all users.
+		Additional WAI concerns and standards:
+		 - User agent accessibility : A user agent is any device used to view a Web page. The most common user agent is a Web browser.
+		 - WCAG checklist : A checklist for the accessibility guidelines detailed in the WCAG
+		 - Accessibility for developers : The W3C also addresses ways to ensure that development tools can be used by disabled people.
+
+ - Section 508 of the Rehabilitation Act (2001) - Electronic and Information Technology Accessibility Standards.
+		Requires Federal agencies provide accommodations for the disabled for all electronic & IT developed, procured, maintained or used by federal agencies
+		The chief purpose of Section 508 is to ensure that disabled individuals have a comparable level of access to information
+		Section 508 includes the following standards for Web sites:
+		 - All non-text elements must have a text-based equivalent.
+		 - If using multimedia, all equivalent info must be properly synchronized with the multimedia so that disabled persons are not at a disadvantage.
+		 - Info must be equally available in color and without color.
+		 - Doc's must be made available without requiring an associated style sheet.
+		 - Text descriptions must be made available for all image maps.
+		 - Client-side image maps should not be used because they cannot be properly presented to visually impaired users.
+		 - If using tables for data, you must identify all row and column headers.
+		 - If a table has two or more rows or columns, you must use row and column headers.
+		 - Sites that use frames must have titles that easily enable alternative browsers to navigate through each frame.
+		 - If necessary, a separate text-only site should be made available to ensure access.
+		 - When scripting technology is used to enable a site feature (e.g., a form), a plaintext alternative must be available
+
+
+---Validator Tools to Verify Web Page Accesibility---
+
+- W3C Page Validator 	/ HTML/XHTML Validator			/ Web-Based & Firefox Add-On
+- HTML Validator	/ HTML/XHTML Validator			/ Firefox Add-On
+- Cynthia Says		/ Site Devoted to the WCAG		/ Web-Based
+- MAGpie		/ Validates Sites, & creates audio 	/ Stand-Alone
+			  captions & multimedia descriptions
+
+
+---General Web page accessibility considerations---
+
+Addressing visual challenges
+ - Text readability — Make sure that fonts used are the correct size.
+ - Text support for images — All images must have 'alt' attribute
+ - Screen-reader support — All pages and page elements can be rendered by audio screen readers.
+
+Addressing audio challenges
+ - Alternative audio support — Make sure that a text-based equivalent is readily available for any audio on your page
+ - Alternative speech input — If the site includes the ability for speech input, make sure that an equivalent keyboard entry mechanism is available.
+ - Text support for audio elements — Make sure that any audio elements are clearly marked with alternative text so that readers can obtain the information.
+
+Addressing cognitive and technical challenges
+ - Page content that flashes, flickers or strobes — May cause problems for those with neurological disorders.
+ - Alternative navigation — Navigation aids should be provided to help those with lower cognitive skills.
+ - Audio support — Audio transcriptions of text-based content may help users with reading disabilities such as dyslexia.
+ - Low-resolution alternatives — Design Web pages so that they do not require large, expensive screen resolutions, or provide low-resolution alternatives.
+
+
+---Creating and documenting an initial Web site plan---
+
+Before you start coding, you must create a plan for the site (aka. site diagram, story board, etc.)
+Your Plan Must Include the Following:
+ - A statement on the purpose & intended audience for the site. This statement may evolve over time, but it is important to steer all efforts in the proper direction.
+ - A rough outline of the pages needed, including:
+	- The default page, also called the home page.
+	- Sections of the site
+	- An estimate of the technologies required (e.g., databases, CGI, search capability, indexes).
+
+
+---Wireframing---
+
+The process of developing an outline for a Web presence. Steps in the wireframing process usually include:
+ - Determining the purpose and objective of the Web site.
+ - Identifying all stakeholders for the site.
+ - Outlining the basic steps of the development process.
+ - Identifying steps for managing the project.
+ - Outlining site navigation.
+ - Identifying the technologies that are invoked with each user request.
+
+
+---Determining the audience and message---
+
+Successful Web sites have a strong, central theme aimed at a distinct audience.
+
+As you determine your audience, consider eliciting input from various parties, including:
+ - Customer representatives : organizations often have important customers attend meetings to provide input
+ - Suppliers : Make sure your product suppliers are ready for your sales volume
+ - Shareholders : May provide input on how the page should look/feel
+
+
+---Validating design issues---
+
+Consider The Following Design Concepts:
+ - Message -  Deliver a coherent message for each page. Distracting/Irrelevant info should be removed or relocated
+ - Fonts - Use common fonts so browsers can render them, and ensure they're large enough to read
+ - Images - Ensure all images contribute to a page's navigability or its message
+ - Color - Take time to consider color combinations so that your pages are as attractive and readable as possible.
+
+As you Validate Design Issues, Consider the Following: 
+ - Organizational Design Standards - Make sure that you are following developed rules and advice from your department and others
+ - Ethnic Diversity - You may be asked to tailor messages to particular cultures and ethnicities
+ - Language Choice - English, Spanish, etc. What is your audience / What does the gov't require
+ - Common Color Schemes - Preferences for color combos differ btwn cultures. Remain sensitive to & informed about such preferences.
+ - Messages that Appeal to Customers - You may need to alter your message about something if you present it to another culture.
+
+
+---Obtaining relevant input from stakeholders---
+
+Stakeholders can provide or help determine the following information:
+ - The purpose of the Web site.
+ - The site's look and feel.
+ - The services that the audience requires from the site.
+ - Funds available to develop the site.
+ - Development timelines. Your team will largely determine how long it will take, but will also have to coord. with other departments in the organization.
+
+Remember:
+ - People who will approve your project often have no technical expertise in your field. They're still essential to success.
+ - Be prepared to explain non-technical needs to a technical audience. (i.e. presenting sales concerns to the IT dept.)
+
+
+---Leading discussions---
+
+Consider the following strategies that you can use to effectively take the lead during a meeting: *IM HAM FR*
+I - Introductions - introduce ppl and explain their role on the team
+M - Monitor time — If meetings are too long, participants may not want to attend again.
+
+H - Handle heated discussions — Changing focus may be especially important 
+A - Action items, including timelines — A list will help you communicate your team's progress.
+M - Distribute minutes — Meeting notes, or minutes, help all parties see progress & determine which topics were omitted
+
+F - Focus the Discussion — Provide an agenda of meeting topics so participants come prepared and expecting to discuss only relevant issues.
+R - Recall Past Business - Make sure that each team builds on past decisions and considers past discussions in a meaningful way.
+
+---Testing the Site---
+
+When testing your Web pages for browser compatibility issues, check the following: *SCHITS*
+ - Scripting languages — Make sure that any scripting language you use is supported by the majority of Web browsers.
+ - Color support — Your customers' browsers may not render them exactly as you have intended.
+ - HTML version — Choose a version of HTML that you know most browsers will support. HTML5 is best bc its backwards compatible.
+ - Images — Some Web browsers do not support images at all. Always provide alternative text descriptions for images, and use background images sparingly.
+ - Table Rendering— Some browsers may not render the information proportionally, which can distort the way ur info appears. Some don't support them at all.
+ - Strictness levels — Older browsers may not be able to render the newer versions of HTML or XHTML well.
+
+
+---Managing the Site---
+
+*CURRENT*
+- Create New Content - Innovation and Fresh Content are essential to keep your site popular
+- Update Dead Links
+- Remove Old Sites
+- Remove Unused Pages
+- Ensure Connectivity - Make sure you have enough bandwidth so access is not slow
+- New Ideas & Feedback - Stakeholders and customers are sure to provide ideas. Some changes may be subtle, others time consuming
+- Troubles Must be Reported - Sometimes you need to contact your ISP and begin a trouble ticket to begin resolving a problem.
+
+
+---Intellectual Property---
+
+Trade secret	Intellectual property that must remain private for a company to retain viability.
+Copyright	The legal ownership of expression by an author.
+Trademark	A unique word, phrase or symbol that is claimed or officially registered by an organization with the government.
+Licensing	The legally authorized use of another person's or entity's copyrighted intellectual property.
+Infringement	Any violation of a copyright or trademark.
+Plagiarism	A specific instance of infringement in which an individual or entity claims to have created content that they did not
+
+
+---Hosting and Web Service Providers---
+
+Configuring your own hosting solution:
+ Advantages: You have more control over your services // You have more choices.
+ Disadvantages: You must buy/house all necessary hardware & software // Configuring your servers will take time & expertise // 
+		You must manage it yourself, including security
+
+Using an Internet Service Provider (ISP):
+ Advantages: You do not need to purchase hardware or software // The ISP will configure the server for you.
+ Disadvantages: You have fewer choices in the configuration // Provides only basic services (limited CGI and small databases) //
+		You are dependent upon the ISP's management and security services
+
+Cloud service providers:
+ Advantages: No purchase of hardware/software // Will configure your server & provide completed services for your organization // Will create custom solutions
+ Disadvantages: flexible subscription fee depending on resources used //  you are dependent upon its management, security services and uptime reliability.
+
+Types of Service Providers:
+ - Co-location - You provide the hardware, and they supply space/bandwidth for your server.
+ - Dedicated Hosting - The service provider gives you access to a dedicated server that it owns.
+ - Virtual Server - One Web server contains your site and several other sites
+
+ISP vs Cloud Servers:
+A cloud service provider is prepared to provide more complete services, including:
+ - Software as a Service (SaaS)
+ - Backup services and nearly unlimited hard drive space on a pay-as-you go subscription
+ - Advanced Web & database connectivity, including the creation of custom CGI applications
+ - Enterprise resource planning (ERP) - the ability to automate the planning & operations of your entire organization 
+Costs Associated with Cloud Service Providers:
+ - Database Connectivity
+ - Per-Service Costs
+ - Bandwidth
+ - Customer Support
+ - Security
+ - Applicaiton Development
+
+**KNOW YOUR NEEDS : Traffic, Hard Drive Space, Database and CGI Needs, etc. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Chapter 2: HTML5 Coding
+
+**NO NOTES NEEDED**
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Chapter 3: CSS and Graphical Elements
+
+**NO NOTES NEEDED**
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Chapter 4: Hyperlinks
+
+**NO NOTES NEEDED**
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//- CHAPTER 5: HTML TABLES -//
+
+TABLE ELEMENTS:
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+ELEMENT		TAG 		REQUIRED?	DESCRIPTION
+Table		<table>		Required	Creates Table / Contains all other Table elements
+		</table>
+
+Table Caption	<caption>	Optional	Adds caption or title / appears above the table by default
+		</caption>
+
+Table Row	<tr>...</tr>	Required	Contains all data for a table row
+
+Table Header 	<th>...</th>	Optional	Typically designates calls in the top row or left column.
+						By default header cells are bold and center aligned
+
+Table Data	<td>...</td>	Required	Designates table cells by contents
+				unless <th>	Left horizontal & Center vertical alignment
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^	
+
+DEFINITIONS:
+*rowspan: Attribute that identifies the number of table rows a single cell can occupy.
+*colspan: Attribute that identifies the number of table columns a single cell can occupy.
+*padding: Property used to manipulate the amount of space between cell content and the cell's inner border.
+*border-spacing: Property used to manipulate the amount of space between borders of adjacent table cells.
+
+CSS PROPERTIES FOR TABLES AND TABLE ELEMENTS:
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+PROPERTY		DESCRIPTION				VALUES
+border			determines style of the border		border width, border line style, border color
+								**to add a border -> <table border="1">
+
+border-collapse		collapses adjacent borders		collapse
+
+border-spacing		sets spacing of adjacent borders	# in px
+
+padding			sets space between data and border	# in px
+
+width			sets table/cell width on page		# in px, % of browser window
+
+background-color	bkgrnd color for table elements		color name, hex value
+
+text-align		horizontal alignment			left, center, right, justify
+
+vertical-align		vertical alignment			top, middle, bottom
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Notes
+*If you set multiple cell heights in the same row, the tallest will take precedence regardless of order
+
+HTML STRUCTURAL ELEMENTS:
+*<header> - top of webpage
+*<article> - web site content
+*<nav> - defines navigation links
+*<aside> - content aside from article content (i.e. reviews, ads, etc)
+*<footer> - bottom of web page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//- CHAPTER 6: HTML FORMS -//
+
+Forms require the use of a Common Gateway Interface (CGI)// can also use Active Server Pages (ASP) and Javascript Server Pages (JSP)
+	- these use server-side script whereas the users computer or browser uses client-side script
+	- 2 functions of CGI script on servers = 1. receive the data  & 2. process and format the data
+
+
+--- DIAGRAMMING A CGI SESSION ---
+
+necessary elements : web browser, CGI script, web form, web server (with CGI interpreter)
+
+1. The client sends the request to the web server ; the server sends the form
+2. The end user completes the form
+3. The end user clicks submit/ uploads the completed form to the web server
+4. The web server processes the info with the help of a CGI script and interpreter
+5. The web server sends the processed info back to the browser where the end user receives a reply
+
+*When submitting a form it goes to the server as a raw text string *Name=Value pairs*
+i.e. Name=Alissa&Email=ali@gmail.com&color=green
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+FormMail
+- created by Matt Wright in 1997
+- written in Perl (Practical Extraction and Report Language) which allows developers to use a free CGI interpreter
+- file name FormMail.pl
+- designed to receive info from a web form and send it to ur email
+- available for free
+- easy to customize with minimal modifications
+
+1. download formMail
+2. install Perl on your web server
+3. define the formMail variables
+4. Give executable permissions to formMail on your server
+5. refer to teh formMail script in your web form
+6. wait for users to visit, and check your email for results
+**USE THE LATEST VERSION OF FORMMAIL WHICH ALLOW ITS USE WITHOUT INVITING SPAMMERS
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+<form></form> - contains all elements for a form
+		
+	required attributes:
+	* method - specifies which method the browser will use to send form data to a Web server
+		* get = form data is appended to the URL for use in a query string. Less secure
+		* post = form data is posted to the URL in action attr. (preferred bc it sends more characters) requires more processing
+	* action - specifies the name and location of the CGI script used to process the form
+
+
+<input /> - to create text & check boxes, radio buttons, and submit & reset buttons
+	attributes:
+	* type - designates the form field type as a text box, radio button, submit, reset, password, or check box
+	* name - the name of the memory cell/ "variable"
+	* value - the value associated with the 'variable'/memory cell
+
+<select></select> - container tag used to create option select lists
+	attributes : name , (id, multiple - allows # of selections, size - how many you see w/o scrolling)
+	contains <option></option> element
+
+<textarea></textarea> - creates scrolling text area spaces ; you can enter default text...
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+WEB FORM FIELDS : 
+
+- Text box : <input type="text".../>
+- Radio button : <input type="radio" checked.../>
+- Check box : <input type="checkbox".../>
+- Option select lists : <select ...><option>...</option>...</select>
+	*"multiple", size
+- Text area : <input type="textarea".../>
+	*cols,rows,wrap
+- Password field : <input type="password".../>
+- File upload : <input type="file".../>
+- Submit button: <input type="submit".../>
+- Reset button : <input type="reset".../>
+
+attributes for all form fields = 
+	* name , value, id, etc.
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+CAPTCHA (Completely Automated Public Turing Test to tTell Computers and Humans Apart)
+ - a challenge response mechanism designed to descern between a human and a "bot"
+ - automatically generated image presented to a user who has just submitted info or made a request to a server
+
+ * captcha services: 
+    - captchas.net
+    - phpcaptcha.org
+    - etc.
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Search Engine Optimization
+
+- learning how a particular search engine ranks a website so you can get a higher ranking
+
+	* create as simple a form as possible
+	* captcha may lower score because bots cannot read the whole page
+	* give form fields informative, descriptive labels
+	* provide a clear call to action
+	* provide alternative text navigation
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Application: 
+
+processing forms is done with Perl-based CGI, ASP, JSP, and PHP
+you can view the source code for websites and observe the <form> elemet to verify which they're using
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//- CHAPTER 7: VIDEO AUDIO AND IMAGE TECHNIQUES -//
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Embedding a Video
+
+<video width="36" height="270" controls="controls" poster="image.png">
+  <source src="video.mp4" type="video/mp4" />
+  <source src="video.webm" type="video/webm" />
+  <source src="video.ogg" type="video/ogg" />
+</video>
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+ELEMENTS (el) & ATTRIBUTES (at):
+
+<video> (el) : defines a video to embed on a web page
+width/height (at) : specifies the width and height in pixels of the video window (if unspecified it'll use source file size)
+controls (at) : adds video controls such as the play, pause, rewind, and volume
+poster (at) : identifies an image to be displayed until the play button is clicked or while video is downloading (if unspecified, first frame of vid is displayed)
+<source> (el) : defines the media resource. Multiple can be listed, such as diff video formats to support a variety of devices and browsers
+src (at) : identifies the location and file name of the media resource
+type (at) : identifies the format or MIME of the video [MP4, WebM, and Ogg are supported formats]
+text : enclosed in video element, will appear if the browser doesn't support the formats available
+loop="loop" : specifies file will repeatedly play without stopping
+autoplay="autoplay" : specifies video will play automatically upon loading
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+MP4/H.264 - supp. on Chrome, IE9, Safari, and Firefox (with windows-only manual installation)
+Ogg/Theora & WebM/VP8 - supp. on Chrome, IE and Safari (with manual installation), Firefox, and Opera
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Embedding audio
+
+<audio controls="controls">
+<source src="audio.mp3" type="audio/mpeg" />
+<source src="audio.wav" type="audio/wav" />
+<source src="audio.ogg" type="audio/ogg" />
+</audio>
+
+*controls identifies the default audio controls (play, pause, volume, etc.)
+*any text that appears within the <audio> element will appear if the  browser cannot load it
+
+MP3 (.mp3) - supp. by chrome, IE9, & Safari
+Ogg (.ogg) - supp. by Chrome, Firefox, and Opera
+Wav (.wav) - supp. by Chrome, Safari, Firefox, and Opera
+
+ATTRIBUTES TO AUDIO FILE:
+loop="loop" : specifies file will repeatedly play without stopping
+autoplay="autoplay" : specifies video will play automatically upon loading
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+VECTOR : graphics that use mathematical coordinates with lines, curves, and shapes to create images and specify colors
+	 can be created using various tools including Adobe Illustrator and Adobe Freehand
+	 Vector graphics are generally small in file size. Their presentation size can be scaled without losing image quality.
+
+BITMAP : graphics that use small dots (usually thousands) to create images and specify colors. Each dot is mapped to bits 
+	 stored in a computer's memory. Bitmaps are also called raster graphics, and they include the JPEG, GIF and PNG formats.
+	 Making bitmap images more detailed can create large file sizes (e.g., 20 MB). Removing pixels and compressing files 
+	 will decrease file size, but will also reduce image quality.
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+IMAGE MAPS
+
+An image map is an image that contains clickable regions, sometimes called hot spots. Each hot spot acts as a hyperlink.
+You define each hot spot with a set of coordinates (indicating its position on the image) and a URL reference.
+Client-side image maps use map code embedded within the HTML page.
+
+CLIENT-SIDE:
+
+<map name="mapname">
+<area shape="shape" coords="coordinates" href="url" alt="description"/>
+<area shape="shape" coords="coordinates" href="url" alt="description"/>
+<area shape="shape" coords="coordinates" href="url" alt="description"/>
+</map>
+<img src="imagemap.gif" usemap="#mapname"/>
+
+-shapes: rect , circle, poly, default (all of unused space)
+-coords: rect(x1,y1,x2,y2) top left and bottom right, circle(x1,y1,radius) center and radius, polygon(x1y1,x2,y2...nx,yn)-up to 100 pairs defined in order
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Image transparency makes the image seem like its floating on your background/blends it
+
+*GIF89a and PNG support transparency
+
+-- IMAGE INTERLACING --
+
+a technique that allows an image to progressively display in a browser as it downloads.
+This action makes your pages more accessible to users with slower Internet connections.
+(standard image formats are read top to bottom, top half loads when page is 50% complete, then bottom at 100%)
+
+An interlaced image is repeatedly scanned from left to right. The first pass will render roughly 13 percent of the entire image.
+The second pass delivers 25 percent, and then continues in 25-percent increments until the image renders completely.
+During this process, the full image will at first appear fuzzy, but will continuously sharpen.
+*You can create an interlaced image by configuring an image file in a graphics-editing application and saving it as a compatible file type.
+
+*GIF 87a & 89a , and PNG support interlacing
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+------ ANIMATION ------
+
+GIF/PNG Animation
+   Programs such as the Alchemy Mindworks GIF Construction Set allow you to incorporate several images into one file.
+   *GIF 89a & PNG support animation
+
+Flash Animation
+   You can create animation using complex scripts, called macros.
+   Flash macros manipulate vector-based graphics to create animated sequence (more sophisticated).
+   Flash movies are created using the Adobe Flash CS4 application.
+   Animation creation applications are quite expensive.
+
+Microsoft Silverlight
+   Silverlight is Microsoft's response to Adobe Flash.
+   It is compatible with multiple Web browsers used on Microsoft Windows and Mac OS X operating systems.
+   Consists of the Silverlight application for creating Silverlight animations, and the Silverlight plug-in for viewing animations on the Web
+   The Silverlight plug-in needs to be launched from an HTML page via JavaScript.
+   It is largely designed for online video playback and intense graphical interactivity.
+
+Java Applets
+   For the animation to render, the user agent must have a Java interpreter installed.
+   Java animations may not render as quickly as Flash or Silverlight movies
+   Although the Java development environment and all Java players are freely available
+
+Scalable Vector Graphics (SVG)
+   a W3C-recommended language developed by various vendors
+   uses XML to describe graphics and graphical applications
+   SVG allows you to create cross-platform animated movies.
+   Not all SVG images are animated,but this application is common because SVG offers comprehensive animation support.
+   SVG is an open standard. However, it provides similar features in addition to animation, including:
+	- compression : high quality movies can be made to have a smaller file size
+	- searchable text : text in SVG images can be indexed and searched
+	- zooming : you can zoom in on portions of an image w/o losing quality
+
+--- Mobile Device Issues w/ Animation and Plug-Ins ---
+
+*Animation techniques are often proprietary, so your site visitors may need to download a plug-in.
+To solve this problem, you can create another version of your site to accommodate visitors without plug-ins.
+Creating an alternative site requires more time and resources on your part, but it ensures that your site is available to all users.
+
+*Plug-ins drain system resources.Plugs-ins are required to view certain content because the content will not play on Web browsers without them.
+This consideration is especially important for users on mobile devices. Battery life can decrease up to 40% when using a plug-in
+HTML5 solves this issue by providing native support for animation, movies and other multimedia without the use of plug-ins.
+CSS and JavaScript are used instead.
+
+*Animation may seem useful and interesting, but it is frequently overused. Its often used for entertainment not information.
+If they are used to give info, include alt text for users who are interested only in your site's informational content.
+
+*Animated images can limit accessibility. Only older browsers won't render animation/png but be considerate
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+----Creating and Managing Images------
+
+There are several options you can use to obtain and manage images for use on your Web pages. You can:
+ - Create original images using image-creation software.
+ - Scan hard-copy images.
+ - Use stock photographs.
+ - Obtain photos from photo-sharing Web sites.
+ - Use photo management software to organize, edit and share your images.
+
+Image-creation software applications can often handle a variety of formats, such as GIF, JPEG and PNG.
+ *Popular image-creation applications include:
+  Adobe Fireworks, Adobe Photoshop, Adobe Illustrator, The GIMP, & Inkscape
+
+Image Layers: a good idea to manipulate individual aspects, but only available w/ PNG
+
+Scanning Images
+
+Pixels : the smallest unit displayed by a computer monitor. Form the building blocks for images
+
+Color Depth : Higher bit values (aka bit depths) result in more intense or realistic colors.
+              As the color depth increases, however, so does the file size.
+	      8 bits of color info per pixel produces up to 256 bits of color info, and so forth.
+
+Image resolution: A user's monitor resolution determines how large onscreen images will be displayed.
+    		  Depends on pixels in height and width of display monitor.
+		  Higher resolutions have a greater ppi (pix per in.) thus better quality
+		  For printing - measured in dots per in. (dpi) // when scanning or importing an image set resolution to 72dpi
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+-----Using Stock Photos-----
+
+You can buy the rights to a photo to use in printed material or on a website
+photographers file their images with an agency that negotiates licensing fees for the photographer
+Stock images are then licensed from the agency
+
+2 Types of Licenses = 
+- Royalty-Free license - allows the buyer to use an image without having to pay a royalty each time the image is used.
+			 The buyer also does not have the right to resell or transfer the image. Price based on file size.
+
+- Rights-managed license - allows the buyer to "rent" an image through negotiation of a specific price for a specific use.
+			   Rights-managed licenses are usually more expensive than royalty-free licenses, but allow for much larger print runs.
+			   Generally, the fee charged is based on the scope of the project.
+
+
+-----Microstock Photography-----
+
+iStockphoto is an online microstock photography provider. Usually charge super cheap prices ($1) to use a photo
+They accept professional and amateur photography and deal almost exclusively over the internet
+Image prices are based on credits , and credit prices can range.
+
+--------Free Images -------------
+
+Some Web sites offer digital photos for personal and commercial use free of charge, with certain restrictions.
+
+-------Photo Sharing--------------
+
+Another possible source for free images is photo-sharing Web sites, although photographs on these Web sites are copyrighted to the photographer
+and you must contact the photographer or owner of the photo to obtain permission to use the images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//- CHAPTER 8: EXTENDING HTML -//
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Concept:	Description:
+Variable	a place in memory used to store information for later use
+
+Array		A collection of variables stored in a series (holds multiple calues)
+
+Function	Code that allows you to refer to an entire series of steps or commands
+		Used to organize code into discrete sections
+
+Interpreter 	Software used to read and process code in standard text files.
+		PHP, Perl, and ASP are all languages that use an interpreter
+
+Compiler 	An application used to process code in standard text files into executable applications
+		
+Include		A set of files called a librar that you can refer to in your code.
+		Used to avoid having to recreate code that has already been written
+
+Print		A command that prints application output to a destination (often the screen)
+
+Echo		A command that repeats the input you type back to a  terminal or an application window
+		Can also be used in an application to repeat input so that it can be processed or forwarded
+
+Statement	logical constructs that allow you to control the way that info flows in the application
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Statements:	Description:
+If/Then		Executes a process only if a particular condition is true
+
+If/Then/Else	Executes a process if the condition is true; else it executes a different process
+
+Do While	Runs a specified process while a specified condition is true (occurs the entire time a condition is true)
+
+Do until 	Runs the specified process until a specified number of events have occurred
+
+Break		When placed inside a statement, allows application to break out of an infinite loop
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Server-Side Languages 
+
+Attributes: code is executed by server not the browser
+	    code is placed in files called applications, assigned execute permissions by the server
+	    in some cases it is placed in the HTML
+	    code executes because an interpreter has been installed and activated on the server
+
+Purposes:   Browser detection, Database Connectivity, Cookie Creation and Identification
+	    Logon scripts, Hit counters, & File Uploading and Downloading
+
+Common Languages: PHP, Perl, ASP, Visual Basic, C, C++, C#, and Java
+
+
+-------PHP Hypertext PreProcessor (PHP)---------
+
+An interpreted server-side scripting language for creating dynamic Web pages.
+It is embedded in HTML pages but is usually executed on a Web server.
+
+<?php ...code here... ?> the opening and closing tags
+
+
+-----Practical Extraction and Reporting Language (Perl)------
+
+A cross-platform language that enables users to write custom CGI programs and system management programs.
+Commonly used for various purposes, including Web server processes.
+
+#! = shebang : first line used in Perl apps to point to the location of the Perl interpreter
+	       many problems with Perl originate with an improperly written shebang line
+
+
+-----Active Server Pages (ASP) using VBScript------
+
+Microsoft's original server-side scripting solution. It has largely been supplanted by .NET. PHP is also an alternative.
+You can create ASP apps using VBScript, which is similar to JavaScript, except its a proprietary Microsoft language.
+
+<%@ LANGUAGE=vbscript %> - identifies that vbscript will be used
+<% ... - the asp vbscript is after this tag
+
+Request.ServerVariables("...") - used to retreive server variables
+*variables include... "PATH_INFO", "HTTP_HOST", "REQUEST_METHOD", "HTTP_USER_AGENT", "REMOTE_ADDR", etc.
+
+
+-------------------------C-------------------------------
+
+A powerful compiled language that has served as the foundation for other languages, inc C++ and Java.
+Mostly used to develop stand-alone applications, rather than Web applications.
+Procedural = Relies upon subprograms (functions) to accomplish a task in an application.
+Uses standard libraries, common to any C implementation, that you can include in the program.
+
+#include <...> = used to include a library so that you can reference that and don't have to write as much code
+
+*ALL C PROGRAMS MUST HAVE A MAIN FUNCTION = int main() {...}
+
+
+------------------------- C++ ---------------------------
+
+Another compiled programming language.
+Object-oriented; not procedural. Can include procedutal elements, but rather than using functions,
+C++ will create an object that can be manipulated throughout the program
+Benefit to obj-oriented languages = they allow developers to create efficient, powerful code.
+
+Term:		Description:
+Object		A discrete portion of an application. Once an object is instantiated (created), it can then be used.
+		All objects have specific states and behaviors that can be manipulated. An object is also known as an 
+		instance, because an object can be duplicated and then manipulated within a program.
+
+Abstraction	The determination of all elements that make an object unique, separate and distinct from another instance of an object.
+
+Class		A group of similar objects
+
+Polymorphism	The ability of a language to make an obj behave differently or to take on diff characteristics
+
+Inheritance	The ability of one class to share characteristics with another class.
+
+**All C++ programs must be compiled to a specific computer type. Once a C++ program is compiled to a specific type of host,
+	it cannot be run on another unless an emulator is used 
+
+
+------------------------- Java ---------------------------
+
+Also an object-oriented programming language. Java is a compiled language; however,
+Java is designed to allow its applications to run on any operating system that has the Java interpreter installed.
+
+2 Benefits: 
+  - Java is object-oriented — It allows the creation of powerful applications.
+  - Java is platform-independent — You do not compile a Java application to a specific computer type
+
+*Uncompiled text files that contain Java code often have the .java file name extension
+  When a file is compiled into a Java application, the file usually has the .jar extension.
+
+
+------- JavaServer Pages (JSP) & Java servlets ---------
+
+Java can be used to create a JavaServer Pages (JSP) API. JSP is a technology that uses Java commands embedded into HTML code.
+
+Java can be used to create Java servlets. A Java servlet is an application that must be installed directly onto the remote server; 
+code from a Java servlet is not downloaded to the browser.
+  steps to use Java servlets: compile the servlet, & place it on a server that is capable of handling it
+
+One of the most popular Web servers that supports JSP and servlets is Apache Tomcat
+
+
+------- Visual Basic (VB) ---------
+
+A compiled programming language developed by Microsoft Corporation.
+It's used for stand-alone applications and server-side Web applications.
+It is not often used as a client-side application in Web browsers, as is JavaScript or VBScript.
+
+Earler versions were more procedural in nature than obj-oriented
+VB now has more obj-or capabilities. Often used in .NET CGI solution
+Considered easier than most languages, but as a result can't perform the asks other languages can
+
+
+
+------------------- C# ---------------------
+
+a compiled object-oriented programming language, and is the proprietary Microsoft competitor to Java.
+C# was designed to be easier to use but still powerful.
+Because C# is a Microsoft-specific language, it has features that make it much easier to develop
+applications and interfaces for the Windows operating systems.
+
+
+------------------- Server-Side Includes (SSIs) ---------------------
+
+An instruction within an HTML page that directs the Web server to perform an action
+an alternative to CGI because it does not use languages such as JavaScript, Visual Basic or Java.
+**instructions are written in SGML
+The instruction is used to dynamically add content to a page just before it is downloaded to a user.
+
+Can be used to: 
+ - Place the results of a database query into a page.
+ - Execute other programs.
+ - Indicate the last time that the displayed document was modified.
+ - Insert text at the bottom of a page (i.e. the current date/time or a customized message in the footer)
+ - Add the current date as a timestamp to a page
+
+FILE NAME EXTENSIONS - 
+A Web server that supports SSI reads each HTML page for SSI instructions, and then processes the instructions for each user request.
+for HTML files that use SSI to use the .shtml or .shtm file name extension (not just .html or .htm)
+
+SUPPORT IN WEB SERVERS - 
+Most Web servers include SSI capability. However, the SSI feature may be disabled.
+With Microsoft Internet Information Services (IIS), you must select features in the GUI to enable SSI.
+Even though your Web server may be configured to support SSI, it may not be configured to look for the standard .shtml or .shtm file name extensions. 
+  You can... 1. Find the supported extension type for SSI. or 2. Define a MIME type for the .shtml or .shtm extensions for the Web server.
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Summary: Here are the server-side scripting languages:
+
+ - PHP: An interpreted server-side scripting language for creating dynamic Web pages
+ - Perl: A cross-platform programming language that enables users to write custom CGI programs and system management programs
+ - ASP: Microsoft's original server-side scripting solution
+ - C: A procedural compiled programming language used to develop stand-alone applications, rather than Web applications
+ - C++: An object-oriented compiled programming language whose programs must be compiled to a specific computer type
+ - Java: An object-oriented compiled programming language whose applications are platform-independent
+ - Visual Basic: A compiled programming language developed by Microsoft and used for stand-alone applications and server-side Web applications
+ - C#: A compiled object-oriented programming language that is the proprietary Microsoft competitor to Java
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Client-Side Languages
+
+Run on the user's computer after the page is downloaded = less processing for server
+
+Issues: some clients don't support JavaScript or other scripting languages
+	Users can deactivate script execution in browsers that normally support it (for security purposes)
+
+
+-------JavaScript-----------
+
+object-based scripting language that allows developers to add interactivity to their Web pages
+can be used on the client side or on the server side
+When used on the client side, JavaScript code must reside inside HTML documents in order to run.
+
+can add... 
+- pop up windows , automatic date/time changes , images and text that change with user interaction, cookie creation and identification
+
+The code is placed within your Web document so that when your browser retrieves a page that incorporates JavaScript,
+it runs the programs and performs the appropriate operations.
+
+JavaScript is object-based, not object-oriented because it does not support inheritance / it has a collection of built-in objects, including:
+ - Document— allows you to obtain values from and write values to a document.
+ - Navigator— allows you to determine the type of browser accessing a Web page.
+ - Array— allows you to create a series of variables to later manipulate.
+
+Use <script></script> tags to insert javascript code or link a .js document
+
+Use to detect browser: navigator.userAgent
+
+Practical uses for scripts of this type include:
+ - Presenting different versions of a site to different browsers.
+ - Informing users in a corporate intranet to upgrade their browsers to a supported version.
+ - Ensuring accessibility to disabled users.
+
+You can also use JavaScript to deposit cookies on the system hard drives of users who visit your site. Using simple JavaScript code, you can use cookies to:
+ - Store passwords.
+ - Store user preferences.
+ - Choose which Web pages will be displayed based on the browser version used.
+
+JavaScript can also be used for copyright protection. A simple script can help prevent your Web site from being included in another site without proper recognition.
+
+
+-------VBScript-----------
+
+can be used on the client side or on the server side, and provides access to built-in documents and methods.
+If you use VBScript on the client side, then in most cases Internet Explorer will be the only Web browser that will recognize the code you use.
+However, if you use VBScript on the server side, then any browser can use your pages.
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Dynamic HTML
+
+An umbrella term to describe HTML's ability to work with other technologies to provide animation, interactivity and dynamic updating in Web pages.
+Because it eases the burden on the server, DHTML is an effective front-end and back-end solution.
+
+ - You can use DHTML to control the way in which an image will perform.
+ - Automatic adjustment of font sizes and colors - using an event handler
+ - Absolute positioning — You can create text that moves to certain positions in reaction to user input.
+ - New document content — Content can be exchanged dynamically, without having to refresh the browser window.
+ - Granular control over animation, audio and video — Rather than writing page code to constantly present a video clip, 
+				you can write code to begin a sequence at a certain time or after a certain event.
+
+
+-------Document Object Model (DOM)---------
+
+It describes the elements, or objects, within a document rendered by a Web browser.
+It is a vendor-neutral, cross-platform Application Programming Interface (API) that specifies how objects in a document 
+   can be referred to and manipulated through scripting languages.
+
+Currently, the DOM is not as universal as expected. Most browser vendors either add their own features or do not implement all of the DOM as proposed by the W3C.
+To work with the DOM for any browser, you need to use a scripting language
+
+Factors that might affect browser choice include: stability & security / Authentication features / Availability
+
+HTML, the DOM and browser compatibility:
+Most HTML elements and attributes are backward-compatible. However, some of the more ambitious improvements, 
+  including frames and the ability to respond to users, do not work well (or at all) with earlier browser versions.
+Some DHTML solutions will work well in one browser but disable another.
+JavaScript appears slightly differently, depending on the browser.
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Canvas !!
+
+An HTML API that provides a place on a Web page (a "canvas") where developers can display graphics, animation, 
+   video and games "on the fly" without the need for a plug-in.
+By itself, canvas is a simple pixel-based drawing API that produces a bitmap image.
+You can use the canvas to display simple drawings, animations, graphics or graphs; 
+You can also use it for more adv tasks that include interactivity, such as games, simulations, video editing or image configurations.
+Allows things to be added/viewed without the need for a Plug-In meaning less resources are used
+
+<canvas>Text Here Will Display if Browser Doesn't Support Canvas</canvas> tags define it
+attributes = id, height & width (px) // if omitted the default is 300px high by 150px wide
+
+- it's transparent, but you can add borders, margins, etc to make it visible
+
+Rectangle: 
+- fillRect(x, y, width, height) -> draws a filled rectangle
+- strokeRect(x, y, width, height) -> draws outline of rectangle
+- clearRect(x, y, width, height) -> clears the specified area and makes it fully transparent
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Offline Web Application
+
+Allow users to interact with Web sites while they are offline
+Web pages will store data locally within the user's browser, utilizing the application cache, allowing them to continue accessing the site.
+
+Utilizing a manifest, which tells the browser which files to store locally, is what allows the user to continue working without the connection.
+When the user goes back online, the application cache will automatically update when revisiting the Web site.
+The application allows quicker loading of the application next time it is used because it can be run locally
+Also reduces load on the server since it only sends out changes/updates made
+
+To set up a site/apps to work offline:
+1. create a filename.manifest file (lists the files needed for it to work offline - i.e. the main html, css, js, and images used)
+	filename is usually the application name
+2. manifest always includes the text "CACHE MANIFEST" in the first line
+3. "CACHE:" followed by the files to be included are then placed in the document
+4. "FALLBACK:" defines what the user will see in the event a resource does not load
+	(i.e. a page that says "Sorry, this page is unavailable", etc)
+5. NETWORK includes  an online whitelist of files never stored (need a server to process and would not need/use locally)
+
+in the HTML file that will be using filename.manifest you must include it in the opening <html> tag
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Geolocation 
+
+An API that defines an advanced interface for location information associated only with the device hosting the application, such as latitude and longitude.
+Geolocation determines how to display a user's location based on how the user visits a Web site
+A number of technologies can be used, such as the user's IP address, wireless network, or GPS hardware utilized on his or her device.
+
+How it Works (can use JavaScript - latt/long are returned values)
+
+3 methods:
+ - getCurrentPosition() -> Retrieves the current geographic location of the user.
+ - watchPosition()	-> Retrieves periodic updates about the current geographic location of the user.
+ - clearWatch()		-> Cancels an ongoing watchPosition() call.
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Drag and Drop Functionality
+
+Allows a user to move an item from one place on the page to another
+
+When drag-and-drop functionality is enabled on a Web page, all links, text and image elements are draggable. 
+With the use of a drop zone — a place where items can be dropped — many elements can be manipulated.
+
+2 kinds: 
+ - dragging files from computer onto a webpage
+ - dragging items to a diff location within the same page
+
+Steps:
+1. specify the html element you would like to be draggable
+2. Add an event listener for the 'dragstart' event on any of the HTML draggable elements
+3. add an event listener for the 'dragover' and 'drop' events on any elements that will accept a dragged item
+
+JS ->
+
+function allowDrop(ev)
+{
+   ev.preventDefault();
+}
+
+function drag(ev)
+{
+   ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+   var data=ev.dataTransfer.getData("Text");
+   ev.target.appendChild(document.getElementById(data));
+   ev.preventDefault();
+}
+
+HTML ->
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src=" logo\CIWLogo.png" alt="CIW logo" draggable="true" ondragstart="drag(event)" width="336" height="69" />
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Web Application Frameworks
+
+A software framework that enables developers to create and manage dynamic Web sites, Web applications and Web services.
+Generally provide common programming code for generic functions that can be selectively overridden by the developer for specific functionality.
+
+Can be used to:
+ - Help manage the creation and maintenance of online databases.
+ - Provide Web page security.
+ - Manage data on the servers that host the Web pages.
+ - Provide templates that make it possible to change the background of Web pages while keeping the graphics,
+	text and other elements of the page intact.
+
+
+---Building Web Pages w/ Django---
+
+Django is written in Python, which is an open-source, object-oriented programming language.
+It allows developers to easily create complex, database-driven Web sites.
+Emphasizes Rapid Application Development (RAD) and the Don't Repeat Yourself (DRY) principle
+	in which the duplication of elements is kept to an absolute minimum.
+
+
+---Building Web Pages w/ Ruby on Rails---
+
+Another open-source Web application framework that also emphasizes RAD and DRY principle
+Works with a wide range of web servers, databases, and operating systems
+Emphasizes simplicity and ease-of-use so that developers can create complex web sites quickly
+
+V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Connecting to a Database
+
+For a database to work you must : 
+1. Provide a way for the Web server and database to recognize each other
+2. Provide permissions to the database so that it can be read and/or written to
+
+
+---CGI Permissions---
+
+CGI scripts often fail because the web server does not have execute permissions
+1. Web server does not have the permissions to execute files and scripts.
+2. The file or script used has incorrect permissions, which prohibits the server from executing the file.
+
+To solve such problems:
+1. make sure that the Web server you are using has all of the necessary permissions
+2. modify the permissions assigned to the file so that it has only enough permissions to function
+	(allowing a file too many permissions can cause serious security problems)
+
+
+------ISPs and CGI------
+
+Actions you need to request that the ISP perform: 
+1. Enable execute permissions on your scripts
+2. Create a directory that contains available CGI scripts
+3. Provide user names and passwords with enough permissions for the system
+
+
+-----N-tier applications-----
+
+When discussing databases, three elements are generally involved:
+ - Data — the database file or multiple database files.
+ - Business logic — the SQL coding necessary to create relationships with the data stored in the database.
+ - Presentation — the way that data and business logic are presented on the user screen.
+
+
+Model: 		Description: 
+Single-Tier	All 3 layers are combined into one app/database
+
+Two-Tier	The client is responsible for presentation and business logic
+		and server houses only the data. Called a client-server relationship.
+		Any change to the database requires client upgrade
+
+N-Tier		All 3 Layers are completely separated. An upgrade in one of the layers
+		doesn't necessarily mean the others are affected
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//- CHAPTER 9: GUI HTML EDITORS -//
+
+You can create Web pages using a graphical user interface (GUI) HTML editor, also called a What You See Is What You Get (WYSIWYG) editor. 
+
+2 Types Of GUI Editors: 
+ - Page Editors - allow you to create a Web page using your mouse and a toolbar
+ - Site Management Editors - provide both Web page creation and site management functionality. 
+        They allow teams of designers and developers to work in an integrated environment to design, build and manage Web site and Internet applications.
+
+Features Offered by most GUIs:
+ - Explanation: Here are the key features of GUI editor:
+ - Templates and Wizards: Allow you to create custom Web pages quickly by selecting from a series of choices
+ - Text Style options: Allow you to apply different font styles, alter text size and color, and apply text formats
+ - Icon bars: Offer easily identifiable graphic icons to provide the same functions found in text-based menus
+ - Images: Allow you to easily insert graphic images into a Web page
+ - Hypertext Links: Allow you to create hyperlinks to pages and files within your Web site, and to pages and files on the World Wide Web
+ - Import HTML pages: Allow you to open pages from the World Wide Web and save them to a Web site or local file system
+ - Table Creation: Allow you to arrange data or organize a page layout
+ - Publish Documents: Allow you to click a button to post pages to a Web server
+
+-----GUIDELINES BY W3C TO MAKE SURE GUIs ARE USEABLE FOR PPL WITH DISABILITIES:-----------------------------------------
+ 1. Make the authoring tool user interface accessible -  tool itself must be accessible to people with disabilities	|
+	- must follow applicable accessibility guidelines, such as the ATAG.						|
+	- Editing views must be perceivable										|
+	- Editing views must be operable, such as providing keyboard access for GUI HTML editors			|
+	- Editing views must be understandable, which includes the ability to help authors avoid and correct mistakes	|
+ 2. Support the production of accessible content									|
+	- Fully automatic processes must produce accessible content. 							|
+	- Authors must be supported in producing accessible content							|
+	- Authors must be supported in improving the accessibility of existing content. 				|
+	- Authoring tools must promote and integrate their accessibility features.					|
+------------------------------------------------------------------------------------------------------------------------
+
+HTML TEXT EDITORS 
+ ADVANTAGES:
+	- handy for learning a scripting language or adding new forms to your site
+	- knowing HTML maximizes your use of GUI editors bc you can manually edit code
+	- You can learn the fundamentals of HTML and update your pages to the latest version(s)
+ DISADVANTAGES: 
+	- typing code can be time consuming
+	- can be a challenge for people with disabilities
+	- not worth it if you only need a page or two
+
+GUI HTML EDITORS
+ ADVANTAGES:
+	- places code into files for you so creating a site can be simple clicks 
+	- can modify code manually
+ DISADVANTAGES: 
+	- some editors alter or ignore code you enter in manually
+	- some are not up to date so they do not recognize newer html tags
+
+*Most GUI editors make it quite easy to:
+ - Preview pages in multiple browsers
+ - View source code.
+ - Validate code using built-in validators or a site
+
+VALIDATION:
+Validation engines will read the <!DOCTYPE> declaration first b4 validating the code
+ - as a result, the code may fail depending on the declaration and pass with another
+
+When validating the code of a GUI editor consider the following:
+ - Most GUI editors include their own native validation tools or offer menus that provide access to validators
+ - Some GUI editors have special features that help ensure accessibility in regard to validation
+
+------------------------------------------
+----------WEB SITE PUBLISHING:------------
+      (Depends On How You Made It)
+
+Most GUI editors have a 'publish' button that makes it easy 
+- or - 
+You can use a File Transfer Protocol (FTP) client
+ - FTP is the most common protocol used to transfer files between two computers (or a server & computer) 
+ - Requires an FTP client to send and a designation FTP server to receive
+ - can also be used to transfer files to an HTTP server, provided that the HTTP server is also running FTP
+ - before you can transfer your Web site files, you must decide where your site will be hosted
+
+**PUBLISHING TO A TEST SERVER
+Professional Developers Post them to a Test Server before moving them to a production server for the following reasons:
+ - To verify that the server can process any CGI and database access requests.
+ - To find & fix any dead links 
+ - To allow members of the development team and other stakeholders to preview the site.
+	(Many changes are likely needed before the final site is ready)
+
+Test Server must be as close to identical to the real server as possible by having: 
+ - The same operating system version
+ - The same type and version of web server software
+ - The sane CGI interpreting software
+
+-------------------------------------------
+Developing Pages for Mobile Devices
+consider how your site will display on smart devices
+
+Key points for optimizing your site for mobile devices:
+ - Keep your pages simple and uncluttered
+ - Prioritize your content
+ - Optimize your site to a smaller screen size
+
+ - use clean valid markup, keep presentation separate from content/links -or make them clearly distinct
+ - always use the alt attribute for <img> tags
+ - label form fields
+ - Use heading tags to structure and style the page (h1-h4 only; smaller are hard to see)
+ - reduce margins and padding to provide more space
+ - provide easy to use navigation options/links
+ - ensure the content is easy to read
+
+Upsides: easier navigation and optimized user experience
+Downsides: minimalistic design, may need to reorganize page, less advertising space
+
+--------------------------------------------
+Mobile Apps vs Mobile Web Sites
+
+*Mobile apps are stand-alone applications that are downloaded from a vendor's software repository onto a mobile device
+*Mobile Web sites are usually stripped-down versions of traditional Web sites.
+
+**HTML5, CSS, AND JAVASCRIPT ARE BEING USED TO CREATE BOTH!!!
+
+Mobile websites > Apps becasue they're accessible from any mobile device regardless of Operating System/Browser, and don't have to be downloaded
+Mobile Apps > Websites bc they're built for specific O.Systems ; languages used to create the apps are optimized for the device, which enables them to run faster
+
+Most companies will use both to broaden their reach/audience (in addition to a tradiditonal website)
+
+
+Converting a Site for Mobile Users:
+Many services are available to convert traditional sites to mobile sites
+
+---------------------------------------------
+WORKING WITH WEB 2.0 (2001+)
+A common term that refers to the changing trends in the use of World Wide Web technology and Web design
+Pre-2001 was Web 1.0
+
+Web 2.0 has also led to the development of Web-based communities and hosted services, such as social networking sites, wiki, etc.
+
+Ajax (Asynchronous JavaScript and XML ) is a Web 2.0 programming methodology that enables Web applications to interact with users in much the same way
+ they do with desktop applications. Ajax allows you to create interactive Web applications using XHTML, CSS, the Document Object Model (DOM), JavaScript
+ and XMLHttpRequest.
+
+----
+Advantages to using browsers as application delivery platforms:
+ - cost reduction
+ - flexilibilty
+ - scalability
+
+Disadvantages...:
+ - connectivity
+ - speed
+ - lockout
+------
+
+Personalizing a Web Page with 3rd Party Applications:
+can dramatically increase the functionality and usability of your Web page without the need for you to create the programs yourself.
+However, be aware that adding such applications may slow page rendering speeds and can easily be overused.
+ *iGoogle Portal (www.igoogleportal.com)
+ *Google Gadgets API (https://developers.google.com/gadgets/)
+
+--------
+Web Feeds
+A data format for delivering Web content that is updated frequently, such as blog entries and news headlines
+ *RSS — Currently @ 2.0, RSS is the "original" family of Web feeds. RSS 2.0 has the widest acceptance of any feed format.
+ *Atom — Currently @ 1.0, Atom is a p recent development but is more robust and feature-rich than RSS. It's designed solely for the syndication of entire news articles.
+
+Atom vs. RSS
+Unlike RSS, Atom provides not only the document's content, but also metadata about the document:
+ - What it is called
+ - Who created it
+ - When it was created
+ - Where it is located
+
+---------
+Podcasts
+A podcast is similar to an RSS feed in that the user can download syndicated audio or video digital-media files
+To create a podcast, you can produce your own audio files (e.g., MP3, Ogg Vorbis or WAV files) and publish them online.
+You can then index the files so that an RSS reader can subscribe to them.
+
+A podcast differs from other digital formats, such as streaming media, in that the podcast files can be syndicated, 
+ subscribed to and downloaded automatically as you add new content.
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//- CHAPTER 10: WEB SITE DEV. FOR BUSINESS -//
+
+A business that is just starting up, or one that is changing or expanding its offerings, must perform some key steps:
+ - Identify a market need or opportunity.
+ - Identify a unique product or service to address that need or opportunity.
+ - Define the target market.
+ - Gather essential user information to help improve the company's product or ability to market and sell.
+ - Establish a brand for the product or service and create a Web site and a social media presence
+ - Determine how the business can best communicate with the target market.
+ - Establish a brand for the product or service.
+ - Determine how to advertise the product or service, including developing a Web site and a social media presence.
+
+
+-----Branding Concepts:-------------------------------------
+ *A brand is a concept or collection of symbols associated with a product, service or person
+
+Following are some branding concepts to consider when deciding on a brand...The brand should:
+ - Be simple — People remember simple
+ - Be different —  You'll stand out if your're different
+ - Be safe — Don't offend anyone, esp. your target market
+ - Make a promise — Express the benefits of the product or service
+ - Reflect the company's attributes — The brand needs to describe what the customer will experience
+ - Reflect the company's personality — The brand needs to reflect the way the customer will feel when they purchase that business's product or service
+ - Appeal to the intended audience — A brand is often chosen because it helps customers self-identify and decide to purchase a particular product or service.
+
+
+As you review resources, use the following questions to help determine whether the site is reputable:
+ - Has it been updated or issued recently?
+ - Is it created by recognized experts?
+ - Does the resource tend to push one product over all others?
+
+
+Keep it simple!
+Oftentimes users just scan the webpage rather than fully reading it.
+- highlighted keywords
+- meaninful headings and subheadings
+- bulleted lists 
+- use crisp, concise text
+- include one idea per paragraph
+- include search engine keywords in the main portions of text
+- Convey the central message using the inverted-pyramid writing style (i.e., conclusion @ the top, then supporting information).
+
+*a website that is simple to use will keep people coming back
+*always have a navigation bar on every page and multiple ways to get back to the home page
+
+
+-----E Commerce Considerations:----------------------------
+
+3 major e-commerce models that are widely implemented: 
+Business-to-consumer (B2C) — A Web-based business sells to consumers or end users.
+Business-to-business (B2B) — A Web-based business sells to other businesses.
+Consumer-to-consumer (C2C) — Individual consumers sell to other consumers.
+
+
+-----Marketing & Search Engine Optimization-----------------
+Term:			Description:
+ - Branding 		Creation of a distinct identity that makes users remember & want to use your product
+ - Target Market	The specific sector in a market (i.e., the audience) that a product or service addresses.
+ - Demographics		The study of groups of people
+ - Niche		A smaller, specialized portion of the market
+ - Mind Share		The effect of marketing efforts influencing a particular target market or demographic
+ 			   (commercial phrases, catch words and sound bites that provoke recognition)
+ - Target Date		The projected point in time when a product or service will be released
+ - Aggregator		A business (usually Web-based) that markets and sells goods and services that it does not own or store
+			   Lets other businesses sell on its site and takes a percentage of the profits
+
+Internet marketing consists of the following practices:
+ - Search engine optimization (SEO) — the use of specific techniques to increase a page's or site's rank on a search engine
+ - Pay per click (PPC) — You pay your site hosts only when your ads are clicked by the user. Paying for a higher ranking.
+ - Web analytics — The practice of collecting data and studying user behavior in an attempt to increase market share and sales.
+	- On-Site Analytics: studying visitor behavior once that visitor has accessed your site
+	- Off-Site Analytics: determining your potential audience and how well your site has addressed and penetrated a specific market
+
+Pay Per Click Features:
+ - Price per keyword 		Make sure you compare prices carefully.
+ - Keyword generation service 	How does the service help you generate keywords? An engine, wizard or other interface?
+ - Bidding options 		Many sites will prompt you to bid for keywords. Other sites will have fixed prices.
+ - Interface quality		Ease of use is vital, because you may waste time trying to learn a difficult interface.
+ - Account fee			Many sites require a fee to open an account.
+ - Monthly minimum		Some services will charge you if you do not generate a minimum number of keyword hits per month.
+ - Software download		Most sites are Web-based. But some services require you to install a software application.
+ - Additional features		Write down additional features that will help your situation. These might mean the diff between success and failure
+ - Promotions			Many PPC services have promotions that might save you money. Just make sure they dont cost you more money in the long run.
+
+-------------------------------------------------------------
+
+---E-Commerce Payment Tech---
+
+Electronic Funds Transfer (EFT) — A generic term that describes the ability to transfer funds using computers
+Payment gateways — A system, either hardware-based or software-based, that mediates between a merchant and an acquirer 
+3-D Secure — An XML-based protocol used by credit card companies to add security to online credit and debit card transactions. Replaced Secure Electronic Transactions (SET) protocol
+
+---Secure Sockets Layer (SSL)/Transport Layer Security (TLS)---
+
+Neither SSL nor TLS are transaction methods; rather, methods used to encrypt data transmissions.
+Encryption can provide authentication, data confidentiality and data integrity. Many other methods exist, but SSL/TLS = most universally applied.
+TLS is quite similar to SSL, but TLS is an open standard that is updated frequently. TLS has rapidly become the accepted standard, often called SSL or SSL/TLS.
+
+---Public Key Infrastrcture (PKI)---
+
+a collection of individuals, networks and computers that together have the ability to authoritatively confirm the identity of a person, host or organization.
+PKI makes it possible for two parties that have never met each other to trust each other. Once trust is established, encryption can begin.
+
+2 Elements:
+ - Digital certificate — a signed public key that verifies a set of credentials associated with the public key of a certificate authority (CA).
+     All SSL/TLS sessions require a valid certificate, which allows unknown parties to authenticate with each other & begin encryption. 
+ - Certificate authority (CA) — a trusted 3rd party that verifies the identity of the person or company that has submitted a certification request (CR).
+     A CA is an organization that issues digital certificates and helps to ensure the identity of a person, host or process.
+     It is more than just a computer that issues digital certificates; a CA is an entire organization.
+
+--------------------------------------------------------------
+Working in a Global Env.
+
+You should be aware of the following items:
+ - Currency differences — E-commerce sites facilitate business with people in many different countries. Things to caluculate: currency converstion, taxes, and tariffs
+ - International shipping — You must consider searches, costs incurred, and delays by customs, and all tariffs.
+                            A product you sell legally in one country may be illegal in another or heavily regulated.
+ - Language concerns — Consider the language(s) used by the target audience and the characters necessary. Use unicode!!
+ - Relationship management — Two important concepts that can help you ensure success are trust-building and customer self-service.
+			     Trust is built through quality customer service and frequent contact.
+			     Customer self-service includes the ability to track orders, customize orders & choose prodcuts w/o help of a live person.
+
+---------------------------------------------------------------
+Databases and Web Pages 
+
+A form allows end users to enter information into a Web page that sends the information to an organization or business.
+When an end user clicks OK or Send, the page sends the user's information to a database in which the information can be processed.
+
+---Web Pages and CGI---
+
+A user-input form must contain code that references a Web server.
+This code is called a Web server application. It helps convey the info. provided by the end user to the Web server/database server that can store/process the info.
+Such applications are called Common Gateway Interface (CGI) applications because they enable information to pass in and out of a server.
+
+CGI Technology		Description
+ - Perl			A traditional CGI technology that is platform-independent.
+ - PHP			A newer CGI technology that will run on multiple platforms.
+ - ASP			Older; avail only on microsoft or systems with a special interpreter. Can create ASP scripts using Javascript or VBscript
+ - .NET			Microsoft's standard dev. platform. It allows you to use various languages, inc. C# (replaced Java), JavaScript, VBScript or Visual Basic.
+ - JSP			A universal CGI technology that uses the Java interpreter, allowing developers to create CGI using the Java language.
+ - ColdFusion		A proprietary CGI technology designed to be easier to install and use than other interpreters and languages.
+ - Python		An open-source CGI tech that emphasizes readability by employing minimalistic code syntax and semantics.  
+ - Django 		An open-source Web framework that makes the creation of complex, database-driven Web sites easier by emphasizing the use of components that can be reused.
+ - Ajax			A CGI programming methodology that enables Web apps to interact w users in much the same way they do with desktop applications.
+ - Ruby			An object-oriented programming language based on Perl and Smalltalk. Has powerful capabilities, but easier to use than many other languages
+
+---Optimizing the Impact of the Web Page---
+
+Search engine companies consider many factors, including but not limited to:
+ - How many hyperlinks from other sites point to a page.
+ - How informative a page is.
+ - How well a page's code is structured.
+ - How often the content on the page is updated.
+
+Other relevant considerations include:
+ - Using properly validated HTML code.
+ - Applying Cascading Style Sheets (CSS).
+ - Structuring pages correctly.
+
+---Front-End Issues---
+
+A properly created Web page should:
+ - Be accessible by all users, including those with disabilities
+ - Incorporate attractive images and graphical elements.
+ - Contain constantly updated hyperlinks and content.
+ - Use tables wisely (not to structure web page)
+ - Present carefully designed forms.
+ - Securely attach pages to databases.
+ - Use the most current technologies appropriate for the page.
+ - Use images sparingly. Images can clutter the page and create bandwidth problems.
+ - Be easily navigable and without dead ends.
+ - Include alternative navigation links. This feature helps accommodate visitors who have deactivated image downloading in their browsers.
+
+Useful Site maps include the following:
+ - Topical hierarchy — A site map should clearly outline the site's sections in a visual, hierarchical format.
+ - Aptly named site sections — Make sure that each section of your site is named accurately to enable users to find the pages they need.
+ - Search capability — Visitors might not find the exact information they seek even after consulting your site map. You can include a search engine text box
+
+---Audience development techniques---
+
+You may be asked for your input regarding ways to develop an audience for your Web site. You might discuss the following methods:
+ - Providing standard Web site features, including properly placed video, audio and active content
+ - Providing unique Web site features, which include ideas generated by you and your Web team, and input from other areas of the company
+ - Using logos and other images traditionally used by the company.
+ - Coordinating your efforts with the marketing department to ensure that your Web site's look/feel complements the company's marketing slicks/traditional paper items
+ - Tracking user visits, which can indicate the popular parts of your site, and can help you to improve the unpopular parts.
+ - Analyzing and interpreting statistics to help increase Web site efficiency.
+ - Working with the sales and marketing teams to obtain input from customers about desired Web site features.
+
+*Push Technology - Any technology that automatically provides information to a customer list. (Mailing List)
+*Pull Technology - Any technology that provides information to a customer only upon request.
+*Visitor Tracking - Any technology that provides the following information: # of visitors to the site/pages, duration of visit, frequency for a specific visitor
+
+---Portals---
+
+A portal is a Web site that acts as a centralized access point for other sites. There are two types of portal: vertical and horizontal.
+ - Vertical — a portal dedicated to one specific interest or field
+ - Horizontal — a portal that provides links to various Web sites with no particular focus.
+
+---Documenting Changes---
+
+As you make changes to your Web site, make sure that you keep a written record of all changes.
+The practice of documenting changes to a site is called change management. 
+
+Documenting change is essential because it allows you to:
+ - Remember which changes have been made to the HTML code and/or pages on the site.
+ - Ensure that you publish all security updates to the Web server.
+ - Provide evidence of good-faith efforts to ensure accessibility.
+ - Verify that you have fulfilled requests from departments in your organization.
+
+--------------------------------------------------------------
+
+File Formats and Active Content
+
+File Format	Extension		Description				MIME Type
+HTML		.html or .htm		HTML files.				text/html
+XHTML		.html or .htm		XHTML files.				application/xhtml+html
+JPEG		.jpeg or .jpg		A standard image format			image/jpeg
+GIF		.gif			A standard image format.		image/gif
+					2 types:
+					-GIF87a (standard)
+					-GIF89a (animated GIF)
+PNG		.png			Newest standard image format		image/png
+Text		.txt			Standard (ASCII) text files.		text/plain
+CSS		.css			CSS formatting 				text/css
+RTF		.rtf			Docs that contain simple formatting 	text/rtf
+					(e.g., underlining, bold, etc).
+PostScript	.ps			A language designed to desc. pg 	application/postscript
+					formatting for text and graphics. 
+PDF		.pdf			Adobe Acrobat proprietary format	application/pdf
+					can retain sophisticated formatting
+					& graphics. Based on postscript
+Zip		.zip			Compressed Files			application/zip
+PGP/GPG		.pgp			Files encrypted by PGP/GPG.		application/PGP encrypted
+		.gpg								application/GPG encrypted
+MPEG - audio	.mpeg			MPEG streaming audio.			audio/mpeg
+MPEG - video	.mpeg			MPEG streaming video.			video/mpeg
+MP3		.mp3			MP3 audio file format.			audio/mp3
+Ogg-Vorbis	.ogg			Ogg-Vorbis audio file format.		application/ogg
+WAV		.wav			Native digital audio format of Windows 	audio/wav
+										audio/x-wav
+RealPlayer	.ram, .ra		Audio/video in the RealPlayer format 	audio/ram
+										audio/pn-realaudio ram
+										audio/x-realaudio ra
+Word		.doc			Microsoft Word documents.		application/msword
+Excel		.xls			Microsoft Excel documents 		application/vnd.ms-excel
+PowerPoint	.ppt			Microsoft PowerPoint documents 		application/vnd.ms-powerpoint
+
+--------------------------------------------------------------
+Back-End Issues
+Server resources that process and store user input are referred to as the back end of a Web site.
+
+---Database connectivity---
+
+Databases provide the ability to:
+ - Present stored information to customers, and allow them to search and retrieve.
+ - Receive information from customers and save it for later retrieval.
+
+There are several database types:
+ - Flat file — Information is stored in a single table, often in a simple text file. The Windows registry is an example of a flat-file database.
+ - Non-relational — Information is stored statically. Information can be searched, but cannot be reorganized or placed into another database.
+ - Relational — Information can be sorted, altered and placed into other databases for retrieval.
+ - Object-oriented — A newer form with the capabilities of a relational database, plus greater storage and search efficiency.
+
+Generally, if you want to query a relational database, you use Structured Query Language (SQL).
+
+*You can connect to database files by using the ODBC interface or JDBC.
+Open Database Connectivity (ODBC) — ODBC's primary purpose is to allow an operating system to register a database. ODBC supports SQL and all major database vendors. 
+				    Once the database is registered, the operating system and its components (such as a Web server) can easily read and update the database. 
+                                    ODBC was developed by Microsoft and is proprietary to Windows-based operating systems.
+Java Database Connectivity (JDBC) — JDBC was developed by Sun Microsystems. Unlike ODBC, JDBC is not limited to Microsoft operating systems.
+				    Like ODBC, JDBC supports major vendors, and SQL. JDBC can be run on various systems, including Windows and UNIX.
+
+-----------------------------------------------------------------
+Bandwidth & Download Time
+
+To download files in a shorter amt of time, you need bandwidth. If you do not have more bandwidth you'll have more download time
+*make sure your web pages don't access several large files
+
+Determining Download Time for a Web Page:
+Step 1 - Check the size of the HTML file and any associated images, files or programs.
+Step 2 - Determine the speed of your network connection, which is generally measured in kilobits per second (Kbps)
+Step 3 - The connection speed and the file size must be converted into a common unit of measure for division: either bytes or bits
+Step 4 - Divide the file size by the connection speed & that's how long it'll take to download
+
+Remember that the result derived from these four steps is a theoretical measurement. It does not consider certain factors, 
+such as the fact that 56-Kbps modems rarely operate above 50 Kbps. Nor does it consider network overhead, noisy phone lines or network congestion. 
+Therefore, the best way to determine how quickly users can download your HTML pages is to test them in real-world settings. 
+
+--------------------------------------------------------------------
+Naming Web Page files
+
+Some server administrators prefer that you use the .html file name extension. Others may prefer the .htm extension. 
+When in doubt, ask your service provider or Web server administrator which standard you should follow.
+
+Usually, an HTTP server looks for a default page, which is a specially named file. 
+The server will present this page automatically each time a user enters the minimum amount of information required to connect to the site.
+
+You can change the name of the default document, but you should be aware that every Web server is preconfigured to a default document name.
+Consult the Web server documentation, your site administrator or your Internet Service Provider (ISP) to ensure that your default file name functions properly on your Web server.
+
+---HTTP 404 - File Not Found error---
+
+Indicates that you have requested a file that does not exist on the specified Web server.
+The file may have been renamed or removed from the site.
+You will also receive this error if you request a site's default document by the wrong name.
+
+Many Web browsers, including Windows Internet Explorer, will automatically generate a custom page when an end user requests a non-existent page.
+Increasingly, Web site administrators create a custom page that will appear whenever a user requests a non-existent page. 
+

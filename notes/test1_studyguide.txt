@@ -1,0 +1,178 @@
+								TEST 1 STUDY GUIDE (6/5/19)
+								 ITD110 - WEBPAGE DESIGN I
+
+
+* Types of Style Sheets
+	- Browser : styles built into the browser
+	- User Defined : styles defined by user
+	- External : separate CSS file linked to html file
+	- Embedded : added to the <head> element
+	- Inline : added as attributes to html elements
+
+* Browser Style Sheets ^^^
+
+* User Defined Style Sheets ^^^
+
+* Relative Units (what/types)
+	- expressed relative to the size of the other objects within the web page or to the display properties of the device itself
+
+	a. pixels : h1 {font-size: 10px;}
+		*relative per device because of varying ppi displays
+
+	b. percentage : h1 {font-size: 200%;}
+		*relative to parent element of that which it is used for
+
+	c. ems : h1 {font-size: 2em;}
+		* relative to the immediate surrounding text (in parent element//siblings)
+		*acts same as % (1em = 100%) // pref. unit bc its easier to develop pgs. with diff elements that have consistent relative font sizes
+
+	d. rems : h1 {font-size: 1rem;}
+		*all font sizes are always expressed relative to the font size used in the html element, not the surrounding text or parent element
+
+* Absolute Units (what/types)
+	- fixed in size regardless of the output device
+	- pt
+
+* Style Specificity
+	- The more specific style rule has precedence
+	i.e. h1#header_1 {color: green;} >>> h1 {color: red;}
+
+* @ import Rule
+	-CSS rule used to import a stylesheet file into the current style sheet
+
+* Vertical-Align
+	- determines the verticle alignment of an element
+		a. baseline - aligns baseline of element with baseline of parent element
+		b. bottom  - aligns the bottom of the element with the bottom of the lowest element in the line
+		c. middle - aligns middle of the element with the middle of the surrounding content in the line
+		d. sub - subscripts the element
+		e. super - superscripts the element
+		f. text-bottom - aligns bottom of the element with the bottom of the text in the line
+		g. text-top - aligns top of the element with the top of the text in the line
+		h. top - aligns top of the element with the top of the tallest object in the line
+
+* List-Style-Type
+	- determines the listing style of an <ol>
+		1. disc OR circle : black circle OR open circle
+		2. square : black square
+		3. decimal : counting numbers (i.e. 1, 2, 3...)
+		4. decimal-leading-zero : counting numbers led by 0 (i.e. 01, 02, 03...)
+		5. lower-roman OR upper-roman : lowercase roman numerals (i, ii, iii...) OR uppercase roman numerals (I, II, III...)
+		6. lower-alpha OR upper-alpha : lowercase letters (a, b, c...) OR uppercase letters (A, B, C...)
+		7. lower-greek OR upper-greek : lowercase greek letters OR uppercase greek letters
+
+* Pseudo-Classes
+	- structural pseudo-class (p. 145) = classification of an element based on its current status, position, or use in the doc.
+		* element: pseudo-class {style}
+	a. root - top element in doc hierarchy
+	b. empty - an element with no content
+	c. only-child - an element with no siblings in the same parent
+	d. first-child - the first child of the parent element
+	e. last-child - the last child of the parent element
+	f. first-of-type - the first descendant of the parent that matches the specific type
+	g. nth-of-type(n) - the nth element of the parent of the specified type
+	h. nth-last-of-type(n) - the nth from the last element of the parent of the specified type
+	i. last-of-type - the last descendant of the parent that matches the specific type
+	j. only-of-type - an element that has no siblings of the same type
+	k. lang(code) - te element that has a specified language *indicated by code (html)
+	l. not(selector) - an element not matching the specified selector
+
+	- dynamic pseudo-class (p. 149) = changes based on actions of the user / used with hypertext
+		* element: pseudo-class {style}
+	a. link - the link has not yet been visited
+	b. visited - the link has been visited
+	c. active - the element is in the process of being activated/clicked by the user
+	d. hover - the mouse pointer is hovering over the element
+	e. focus - th element is reveiving the focus of the keyboard or mouse pointer
+
+* ol VS ul
+	- ordered list: <li> elements are ordered (1,2,3.. / a,b,c...)
+	- unordered list: <li> elements are unordered (*,*,*... / ~,~,~...)
+
+* How to make a link
+	- <a href="url/file"> Text u click to take u to the link </a>
+
+* How to make html Comment
+	- <!-- comment -->
+
+* How to make CSS Comment
+	- /* comment */
+
+* Sectioning Elements
+	1. address : Marks contact information for an individual or group pertaining to the element it is nested in (body, article, etc.)
+	2. article : Marks a self-contained composition in the document such as a newspaper story
+	3. aside : Marks content that is related to a main article
+	4. body : Contains the entire content of the (visible) document
+	5. footer : Contains closing content that concludes an article or section
+	6. h1-6 : Marks major headings with h1 being the largest/highest ranked
+	7. nav : Marks a list of hypertext or navigation links
+	8. section : Marks content that shares a common theme or purpose on the page
+	9. header : contains opening content that introduces an article or section
+
+* What is WWW
+	- World Wide Web
+	* W3C is the World Wide Consortium (regulate/standardize html rules)
+
+* Empty Element VS 2-Sided Element
+	- Empty = elements that do not have both an opening and closing tag
+	i.e. <br /> or <img... />
+	- 2-Sided = elements that do have both an opening and closing tag
+	i.e. <header>content</header>
+
+* Grouping Elements
+	1. blockquote : Contains content that is quoted from another source, often with a citation and indented on the page
+	2. div : Contains a generic grouping of elements within the document
+	3. dl : Marks a description list containing 1+ dt elements, each followed by a dd element
+	4. dt : Contains a single term from a description list
+	5. dd : Contains the description/definition associated with the term from a description list
+	6. figure : Contains an illustration, photo, etc. that is cross-referenced elsewhere in the document
+	7. figcaption : Contains the caption associated with a figure
+	8. hr : Marks a thematic break such as a scene change or a transition to a new topic (often displayed as a horizontal line)
+	9. main : Marks the main content of the document or application; only one main element per document
+	10. ol : Contains an ordered list of items
+	11. ul : Contains an unordered list of items
+	12. li : Contains a single term from a ul/ol
+	13. p : Contains the text of a paragraph
+	14. pre : Contains a block of preformatted text in which line breaks and extra spaces are retained (often displayed in monospace font)
+
+* Relative VS Absolute Paths
+	Absolute : starts from the root folder and processes down the entire folder structure
+	i.e. c:\Users\Downloads\Folder_1\this_file.txt
+
+	Relative : path is expressed relative to the location of the current document / if in the same folder, you only need the file name / if in subfolder, start there
+	i.e. Folder_1\that_file.txt -or- that_file.txt if theyre both in "Folder_1"
+
+* How to use a Class in a Selector
+	-
+
+* How to create a selector
+	selector {style}
+
+	- contextual selectors - Context is based on the hierarchical structure of a document
+		1. * : Matches any element
+		2. elem : Matches the element elem located anywhere in the document
+		3. elem1, elem2, ... : Matches any of the elements listed
+		4. parent descendant : Matches the descendant element that is nested wthin the parent element at some level (the whole path to that element)
+		5. parent > child : Matches the child element that is a child of the parent element
+		6. elem1 + elem2 : matches elem2 that comes directly after elem1
+		7. elem1 ~ elem2 : matches elem2 that follows elem1
+
+	- attribute selectors
+		1. id : Identifies specific elements within the document / can be entered either as #title or h1#title in the style sheet
+			i.e. <element id="id">Content</element>
+			element#id{property:value};
+
+		2. class: Identifies a group of elements that share a similar characteristic or property
+			*to apply the style to the h1, use: h1.intro {color: blue;}	
+			*to apply the style to the entire class, use: .intro {color: blue;}
+
+			i.e. <h1 class="intro">Tri and Succeed Sports</h1>
+        		     <p class="intro">….</p>
+
+* How to work with padding
+	padding space - (p. 140-141)
+		a. padding: size; (1 #) // i.e. padding: 10px;
+		b. padding: top right bottom left; (4 #s) // i.e. padding: 10px 5px 10px 5px
+		c. padding: top/bottom left/right; (2 #s) // i.e. padding: 10px 5px
+		d. (individually) padding-*side*: size; // i.e. padding-right: 5px
+			*side = top, right, bottom, or left

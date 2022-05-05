@@ -1,0 +1,228 @@
+
+	--CHAPTER 5 NOTES--
+
+-------------------------------------------------------------------------------------------
+
+  //Introducing Responsive Design (p. 344)//
+
+- flexible layout : so that the page layout automatically adjusts to screens of different widths
+- responsive images : that rescale based on the size of the viewing device
+- media queries : that detmine the properties of the of the device rendering the page so that appropriate designs can be delivered to specific devices
+
+-------------------------------------------------------------------------------------------
+
+  //Media Queries (p. 345)//
+
+<link href="#" rel="stylesheet" media="devices" />
+*also used in <style> element
+
+Media Types: 
+
+- all : all output devices (default)
+- braille : braille tactile feedback devices
+- embossed : paged braille printers
+- handheld : mobile devices with small screens and limited bandwidth
+- print : printers
+- projection : projectors
+- screen : any computer screen (even phones)
+- speech : speech and sound synthesizers, and aural browsers
+- tty : fixed-width devices sucj as teletype machines and terminals
+- tv : television-type devices with low resolution, color, and limited scrolling
+
+  //@media RULE (p. 346)//
+
+only needed if you dont use the media attribute, or if you listed multiple devices and would like to specify
+
+@media device(s) {
+    style rules
+}
+
+i.e. @media handheld {
+	h1 {color: blue;}
+     }
+
+  //Media Queries and Device Features (p. 347)//
+
+@media devices and|or (feature: value) {
+    style rules
+}
+
+to apply to a style sheet : ex.) @media only screen and (max-width: 480px){ style rules }
+
+Features:
+
+- aspect-ratio : the ratio of the width of the DISPLAY area to its height
+- color : the number of bits per color component of the output device; if device doesn't support color, value=0
+- color-index : the number of colors supported by the output device
+- device-aspect-ratio : the ratio of the DEVICE-width value to the DEVICE-height value
+- device-height : the height of the rendering surface of the output device
+- device-width: the width of the rendering surface of the output device
+- height : the height of the display area of the output device
+- monochrome : the number of bits per pixel in the devices monochrome frame buffer 
+- orientation : the general description of the aspecft ratio: equal to portrait when the height is greater, or landscape otherwise
+- resolution : the resolution of the output device in pixels, expressed in either dpi (dots per inch) or dpcm (dots per cm)
+- width : the width of the display area of the output device
+
+-------------------------------------------------------------------------------------------
+
+Exploring Viewports and Device widths (p. 352)
+
+Web pages are displayed in what is called the viewport in a window
+*for desktops the viewport is the same as the browser window
+*mobile devices have 2 however: a visual and a layout viewport
+	- visual is what the user sees
+	- layout is how the page was designed (with desktops in mind)
+
+-------------------------------------------------------------------------------------------
+
+Creating a Mobile Design (p. 355)
+
+-device width is up to 480px
+
+*Have the most important informationup-front and easily accessible
+*No unnecessary clutter on the home page!(hide elements)
+*Only a few navigation links at a time - limit choices to limit confusion/clutter
+
+-------------------------------------------------------------------------------------------
+
+Creating a Pulldown Menu with CSS (p. 356)
+
+-have submenu titles for the elements housing the nested submenu lists
+-keep nested submenu lists within the <li></li> element of the title
+
+i.e.
+HTML =
+<nav>
+    <ul class="mainmenu">
+	<li><a href="#" class="submenuTitle">Title 1</a>
+		<ul class="submenu">
+		  <li> <a href="#">Pull Down Item 1 </a> </li>
+		  <li> <a href="#">Pull Down Item 2 </a> </li>
+		  <li> <a href="#">Pull Down Item 3 </a> </li>
+		</ul>
+	</li>
+
+	<li><a href="#" class="submenuTitle">Title 2</a>
+		<ul class="submenu">
+		  <li> <a href="#">Pull Down Item 1 </a> </li>
+		  <li> <a href="#">Pull Down Item 2 </a> </li>
+		  <li> <a href="#">Pull Down Item 3 </a> </li>
+		</ul>
+	</li>
+    </ul>
+</nav>
+
+CSS = for a VERTICAL PULLDOWN
+
+ul.submenu {
+    display: none;
+}
+
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover {
+    display: block;
+}
+
+nav a {
+    font-size: 1.5em;
+    line-height: 2.2em;
+}
+
+-------------------------------------------------------------------------------------------
+
+Creating A Tablet Design (p. 363)
+
+-device width is over 480px [under 769px but that part doesn't matter]
+
+*greater width allows for a more horizontal layout, so no need to hide as many elements
+  or focus so greatly on a one-column layout
+
+i.e. 
+HTML = same as above
+CSS = for a more HORIZONTAL PULL-DOWN
+
+ul.mainmenu > li {
+    float: left;
+    width: #%;	*(subjective to # of main menu list items)
+    position: relative;
+}
+
+ul.submenu {
+    width: 200%; *(this is if you want the item to stretch under 2 titles, can be changed)
+    position: absolute;
+    box-shadow: black 5px 5px 15px;
+}
+
+-------------------------------------------------------------------------------------------
+
+Creating a Desktop Design (p. 367)
+
+*has more space so drop down menus are not needed but can still be used
+*elements don't need to be hidden for the sake of saving space
+
+-------------------------------------------------------------------------------------------
+
+FLEXIBLE BOXES (p. 374)
+
+*size can shrink or grow with the browser window
+
+*Items are laid out along a main axis which is horizontal or vertical // perpindicular to this is the cross axis
+
+display: flex; --> puts flexbox on new line
+display: flex-inline; --> keeps flexbox inlline with with its surrounding content
+
+--------------------------------------------------------------------------------------------
+
+Setting the Flex Box Flow (p. 375)
+
+flex-direction: direction;
+	- row, row-reverse, column, or column reverse
+flex-wrap: type;
+	- nowrap or wrap
+
+-OR-
+
+*** flex-flow: direction type;
+
+--------------------------------------------------------------------------------------------
+
+Working with Flex Items (p. 377)
+determined by 3 properties: basis size, growth value, and shrink value
+
+Setting Flex Basis (p. 377)
+flex-basis: size; = the initial size of the item before the browser attempts to fit it into the flexbox/use CSS units of measurement
+
+Defining Flex Growth (p. 378)
+flex-grow: value; = the rate at which flex items will grow from the basis size
+	*value is a nonnegative # relative to surrounding items in flexbox. If set to 0(default) then the box will not grow
+
+Defining Flex Shrink (p. 379)
+flex-shrink: value; = the rate at which flex items skrink below their basis size
+	*value is a nonnegative # relative to surrounding items in flexbox. Default value is 1
+
+***FLEX PROPERTY
+    flex: grow shrink basis;
+	keywords: auto (= 1 1 auto), initial (= 0 1 auto), none (0 0 auto), inherit - to inherit from parent element
+
+--------------------------------------------------------------------------------------------
+
+REORDERING PAGE CONENT WITH FLEXBOXES (p. 388)
+
+an easy way to edit your page content without altering your html
+
+The smallest value goes first (negatives are included)
+   order: value;
+
+--------------------------------------------------------------------------------------------
+
+ALIGNING FLEX ITEMS (p. 391)
+
+align-content: value;
+
+- flex-start: positioned at the start of the cross axis
+- flex-end: positoned at the end of the cross axis
+- stretch: stretched to fill up the cross axis
+- center: centered along cross axis
+- space-between: distributed evenly along cross axis with equal space between them
+- space-around: distr. evenly along cross axis with equal space btwn and at the ends of the axis
+
+--------------------------------------------------------------------------------------------

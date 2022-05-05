@@ -1,0 +1,272 @@
+- CHAPTER 3 NOTES -
+
+Reset Style Sheet - supersedes the browser's default styles and provides a consistent starting point for page design
+
+TO CREATE A RESET STYLE SHEET (p. 173)
+
+* define the display properties of HTML structural elements
+* define the topographic styles for page elements
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+HTML Elements are classified into BLOCK ELEMENTS & INLINE ELEMENTS
+
+Display Style: element{display: type;} (p. 172)
+
+-block : displayed as a block
+-table : displayed as a web table
+-inline : displayed in-line within a block
+-inline-block: treated as a block placed in-line with another block
+-run-in : displayed as a block unless its nest sibling is also a block, in which case, it is displayed in-line (2 blocks = 1)
+-inherit : inherits the display property of the parent element
+-list-item : displayed as a list item along with a bullet marker
+-none : prevented from displaying; removed from rendered page
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+3 CATEGORIES OF PAGE LAYOUT (p. 176-177)
+
+- Fixed Layout : Size of page and element are fixed , usually PIXELS are the unit of measure
+- Fluid Layout : The width of the page elements are set as a PERCENT of the avail screen width
+- Elastic Layout : Images and text are always sized in proportion to each other in EMS
+
+- Responsive Design : The layout and design of a page changes in response to the device that is rendering it
+		   - When using responsive design it is common to have one set of styles for phones, one for 
+			laptops, one for tablets, etc.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+WIDTH & HEIGHT (p. 178)
+
+HEIGHT: not usually set since the browser automatically increases the height of element to match its content
+WIDTH: set by the site developer
+
+max-width= #;  // min-width= #;
+max-height = #;  // min-height = #;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+CENTERING A BLOCK ELEMENT (p. 181)
+(with its parent element)
+
+* set both the left and right margins of the element to 'auto'
+
+i.e.
+	body {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+VERTICAL CENTERING (p. 182)
+
+1st Option = Display parent element as a table cell with a defined height
+	     Then set the vertical align property height to 'middle'
+	i.e. html: <div> <h1> heading </h1> </div>
+	     css: div { height: 40px; display: table-cell; vertical-align: middle;}
+
+* To Vertically Center A Single Line Of Text Within Its Parent Element
+  set the line height of the text larger than the text's font size
+	i.e. h1 {font-size: 1.4em; line-height: 2em;}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+FLOATING PAGE CONTENT (p. 183)
+
+Floating an element takes it out of position and places it along the left or right edge of its parent element
+Subsequent content (not floated) occupies the space previously taken up by the floated element
+
+element {float: position;}
+
+positions: none (default) / left / right
+
+*If sibling elements are all floated along the same margin, they're placed alondside eachother within a row
+*When total width of floated objects exceeds the width of their parent, excess content is wrapped in a new row
+---------------------------------------------------------------------------------------------------------------------------------------
+
+CLEARING A FLOAT (p. 187)
+
+*to ensure that an element is always displayed below your floated elements, apply the clear property...
+	element {clear: position;}
+
+	position
+	left : displays the element only when the left margin is clear of floating objects
+	right : displays the element only when the right margin is clear of floating objects
+	both : displays the element only when both margins are clear of floating objects
+	none : allows element to be displayed alongside the floating object
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+BOX SIZING PROPERTY (p. 192)
+
+element {box-sizing: type;}
+
+type:
+- content-box: CONTENT BOX MODEL: width refers to the element & padding or borders are added space (browser default)
+- border-box:  BORDER BOX MODEL; where the width property is based on the sum of the content, padding, and border spaces
+		any space taken up by the padding and border is subtracted from given space to the content 
+- inherit: inherit the property defined in the element's container
+
+* content is surrounded by the padding space -> surrounded by the border space -> surrounded by margin space 
+
+*in order to support older browsers, it is commonly entered using progressive enhancement with the following extensions
+	element {-webkit-box-sizing: type; -moz-box-sizing: type; box-sizing: type;}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+CONTAINER COLLAPSE (p. 195)
+
+* When elements are floated, they are no longer in their container - thus the computer reads the container as empty
+  this causes the container to "collapse" giving it no height and no background to color
+
+The way to fix this... add a pseudo element
+
+container::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+GRID LAYOUTS - OVERVIEW (p. 202)
+
+Imagine that the page is comprised of a system of intersecting rows and columns that form a grid
+
+Number of ROWS are based on page content
+Number of COLUMNS is based on the number that provides the most flexibility in laying out the page content
+	- most pages are based on 12 columns because its easily divisible by 2, 3, 4, and 6
+
+TYPES OF GRIDS: (p. 203)
+1. FIXED GRIDS – Every column has a fixed position // Widths of the columns and margins are specified in pixels
+2. FLUID GRIDS – Provides more support across different devices with different screen sizes.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+SETTING UP A GRID (p. 204-205)
+
+<div class="row">
+	<div class="column1"></div>
+	<div class="column2"></div>
+</div>
+
+the first div makes the row
+the nested div makes the column
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+OUTLINING A GRID (p. 216)
+
+*outlines are simply lines drawn around an element, enclosing the content, padding, and border spaces
+*unlike a border, outlines do not add anything to the width or height
+
+element {
+	outline-width: value;
+	outline-style: style;
+	outline-color: color;
+}
+
+	-OR-
+
+element {
+	outline: width style color;
+}	
+
+width: thin, medium, or thick
+styles: none (no outline), solid (single line), double, dotted, dashed, groove, inset, outset, and ridge
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+DEFINING A CSS GRID (p. 219)
+
+selector {
+	display: grid;
+	grid-template-rows: track-list;
+	grid-template-columns: track-list;
+}
+
+track list is the list of sizes for each row or column
+
+i.e. grid-template-rows: 100px 100px 50px 
+	is 3 rows of the sizes listed in order
+
+*fr unit = fraction
+	- so 2fr 1fr would split the row or column into thirds, with the first column being 2/3 of the width
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+ASSIGNING CONTENT TO GRID CELLS (p. 220)
+
+*place element in a grid cell (intersection of a row and column)
+
+	     - grid-row/column-start/end: integer; -
+
+i.e. aside {
+
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+     }
+
+		-OR-
+
+     aside {
+	grid-row: 2/3;
+	grid-column: 1/2;
+     }
+
+This would have an element that takes up 4 cells in the 1st & 2nd columns / 2nd & 3rd rows
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+POSITIONING OBJECTS (pg. 226)
+
+selector {
+	position: type;
+	top: value;
+	right: value;
+	bottom: value;
+	left: value;
+}
+
+types:
+	1. static - (default) element is placed where it would have naturally fallen in the flow of the document
+	2. relative - used to nudge an element out of its normal position in the document flow // if no value given it is relative to the other elements
+	3. absolute - places an element at specific coordinates within a container
+	4. fixed - keeps the element at the same position regardless of scrolling
+	5. inherit - elemenet inherits the position value of its parent element
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+HANDLING OVERFLOW (p. 240)
+
+selector {overflow: type;}
+
+types:
+	1. visible - (default) instructs browsers to increase the height of an element
+	2. hidden - keeps element at specified size but cuts off the excess
+	3. scroll - adds up/down and left/right scroll bars
+	4. auto - adds scroll bars only as they are needed
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+CLIPPING AN ELEMENT (p. 243)
+
+*cutting off the edges - usually a rectangle
+
+	selector {clip: rect(top right bottom left);}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+STACKING ELEMENTS (p. 244)
+
+To handle elemental overlappng
+
+selector {z-index: value;}
+
+where value is a positive or negative interger, or the keyword auto
+	*The higher the interger the closer it is
+
+---------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,309 @@
+CHAPTER 7 NOTES
+Alissa Hardison ITD110
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PARTS OF A WEB FORM (pg. 502)
+
+- Controls
+
+	*input boxes - insert text strings/numeric values
+	*option buttons/radio buttons - select data values from a predefined set of options
+	*selection lists/drop down list - select data values from an expansive list of options
+	*check boxes - select data values limited to two possibilities (i.e. yes & no)
+	*text area boxes - enter text strings that may include several lines of content
+
+- Widgets
+
+	*spin boxes - enter integer values confined to a specific range
+	*slider controls - enter numeric values confined to a specific range
+	*calendar controls - select date and time values
+	*color pickers - choose color values
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+STARTING A WEB FORM (p. 504)
+
+<form id="text" attributes>
+	content
+</form>
+
+	*id - identifies the form
+	*attributes - specify how the form should be processed by the browser
+	*content - form's content
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INTERACTING WITH THE WEB SERVER (p. 505)
+
+To specify where to send the form data and how to send it...
+
+<form id="text" action="url" method="type" enctype="type">
+	content
+</form>
+
+	*action - provides the location of the web server program that processes the form (i.e. action="http://www.example.com/redball/survey")
+	*method - specifies how the browser should send form data to the server
+		types: GET method (tells the browser to append the form data to the end or the URL)
+		       & POST method (sends the form data in its own separate data stream // "behind the scenes")
+	*enctype - specifies how the form data should be encoded as it is sent to the server
+		types: application/x-www-form-urlencoded (default // data encoded as text string with spaces replaced by + and special characters replaced with hex. value)
+		       multipart/form-data (format used when uploading files in which no encoding of the data values occurs)
+		       text/plain (data is transferred as plain text with spaces replaced by +)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATING A FIELD SET (p. 507)
+
+A way of grouping fields in forms
+
+<fieldset id="text">
+	content
+</fieldset>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ADDING A FIELD SET LEGEND (p. 508)
+
+Describes the content of the field set
+-TEXT ONLY // no nested elements
+-By default, placed in top left corner of field set on web page
+
+<legend> text </legend>
+
+	*text is the descriptive text of the legend
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATING INPUT BOXES (p. 510)
+
+<input name="name" id="id" type="type">
+
+	*name - provides the name of the data field asso. w/ the control (***ALWAYS NEED A NAME ATTR. IF SUBMITTING TO A SERVER)
+	*id - identifies the control in which the usr enters the field value
+	*type - indicates the data type of the field
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INPUT TYPES (p. 511)
+
+- button - can be clicked to perform an action
+- checkbox - for yes/no or true/false responses
+- color - allows user to select a color
+- date - allows uer to select a calendar date
+- datetime-local - allows user to select a caledar date and time
+- email - used for email addresses
+- file - allows user to select a local file
+- hidden - a control that is hidden from the user
+- image - image that can be clicked to perform an action
+- month - allows user to select a calendar month
+- number - spin box from which users can select a numeric value
+- password - input box in which the entry value is hidden by * symbols
+- radio - can be clicked by a user
+- range - slider from which users can select a numeric value within a defined range
+- reset - can be clicked to reset the web form
+- search - can be used to search for a defined term
+- tel - uesd for telephone numbers
+- text (default) - allows text entries
+- time - allows user to select time
+- url - for entering URLs
+- week - allows users to select a week value
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ADDING FIELD LABELS (p. 514)
+
+Associates descriptive text with the corresponding input box
+
+<label for="id">label text</label>
+	
+	*id - the id of the control that you want associated with the label
+	*label text - the text of the label
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DEFAULT VALUES AND PLACEHOLDERS (p. 523)
+
+To show a DEFAULT VALUE in the input box add the following to that element (This is submittable text, not just a placeholder)
+
+	<input ... value="Value To Be Displayed">
+
+To show a PLACEHOLDER in the input box add the following to that element (This is non-submittable text, just an example)
+	<input ... placeholder="text">
+
+**Style of placeholder is determined by browser // some are treated as pseudo classes and some as pseudo elements ->
+	
+	input: -ms-input-placeholder {code}
+	input::-webkit-input-placeholder {code}
+	input::-moz-placeholder {code}
+	***YOU CANNOT PLACE MULTIPLE SELECTORS IN ONE STYLE RULE OR THE RULE MAY BE IGNORED
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ENTERING DATE AND TIME VAULES (p. 530)
+
+<input name="name" id="id" type="date/datetime-local/month/week/time">
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATING A SELECTION LIST (p. 531)
+
+A box that presents users with a group of possible values for the data field and is created using the following SELECT and OPTION elements
+
+<select name="name" size="value">
+	<option value="value1">text1</option>
+	<option value="value2">text2</option>
+	...
+</select>
+
+*name is the name of the data field that goes into memory
+*size is the number of options that the selection list displays at one time
+*value is the field value that associates with the name when chosen and stores in memory
+
+if you want one to be a default , put "selected" in the option ---> (i.e. <option value="1" selected> )
+
+if you want to allow multiple selections, put "multiple" in the select --> (i.e. <select name="name" multiple>)
+
+for longer lists, to add labels for each group of options, add "optgroup" property ---> (i.e. <optgroup label="label">)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RADIO BUTTONS/OPTION BUTTONS (p. 537)
+
+<label for="id"> Label </label>
+<input name="name" value="vaue" id="id" type="radio">
+
+*to make one selected by default, add checked to the input element
+(i.e. <input ... blahblah ... checked>)
+
+***RADIO BUTTONS MUST BE GROUPED TOGETHER***
+*you do this by having the same field name
+
+<label for="hYes">Yes</label>
+<input name="foodHot" id="hYes" value="yes" type="radio" />
+<label for="hNo">No</label>
+<input name="foodHot" id="hNo" value="no" type="radio" />
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CHECK BOXES (p. 540)
+
+<input name="name" value="value" id="id" type="checkbox" />
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TEXT AREA BOXES (p. 542)
+
+<textarea name="name">
+	text (default value of data field // not necessary)
+</textarea>
+
+**can use css styles to edit height and width of textbox (inline or external)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NUMERIC DATA (p. 548)
+
+Spinner Controls : 
+
+<input name="name" id="id" type="number" value="value" step="step" min="min" max="max" />
+
+*value is the starting/default value
+*step is what increments youre counting by 1, 5, 3, etc.
+*min is the lowest value
+*max is the highest value
+
+** YOU CAN ALSO TYPE INTO A VALUE THAT IS NOT RESTRICTED BY THE FIELD **
+
+^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^V^
+
+Range Slider :
+
+<input name="name" id="id" type="range" value="value" step="step" min="min" max="max">
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SUGGESTING OPTIONS WITH DATA LISTS (p. 553)
+
+Datalist is for guessing what the user might be trying to input
+
+<input name="name" type="text" list="listname" />
+<datalist id="listname">
+	<option value="value" />
+	<option value="value" />
+	...
+</datalist>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FORM BUTTONS (p. 556)
+
+Command : Performs the javascript linked with the button
+<input value="value" onClick="script" type="button" />
+
+Submit : submits the form to the server
+<input value="value" type="submit" />
+
+Reset : resets the form
+<input value="value" type="reset" />
+
+*value is what the button says (i.e. "Submit", "Click Me", etc.)
+
+Custom: [can be used to make a button with a photo]
+
+<button type="text">
+	content (what is inside the button)
+</ button>
+
+**type = submit, reset, or button
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+VALIDATING A WEB FORM (p. 559)
+
+***LIMIT FREEFORM TEXT THAT USERS MAY ENTER -> helps you from a security and a useability standpoint
+
+- Server-Side Validation : occurs on web server
+
+- Client-Side Validation : occurs in the user's browser
+	**can do most of validation here -> reccommended so the server doesn't get overloaded
+
+	- IDENTIFYING REQUIRED VALUES :
+		<input name="name" required />
+
+	- VALIDATING BASED ON DATA TYPE : interger/string/email/etc.
+		form will fail validation if input doesn't match the data type
+		- i.e. if its type="number" and you input "Susan" it will fail
+
+	- TESTING FOR A VALID PATTERN : 
+		Regular Expression / Regex = a way to desc. a pattern of characters
+		*very complicated, most professionals just look it up through a generator
+			<input ... pattern="">
+			- ^\d{5}$ : says in a zip code you have to have only five numbers
+
+	- DEFINING THE LENGTH OF A FIELD VALUE : 
+		<input ... maxlength="value" />
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INLINE VALIDATION (p. 565)
+
+the technique of immediate data validationand reporting of errors
+	- shows errors as they occur
+
+* Using a Pseudo-Class : 
+
+	- checked : check box or option button that is selected
+	- default : the default of inputs/lists/options/etc
+	- disabled : a control that is disabled
+	- enabled : a control that is enabled
+	- focus : a control that is actively selected
+	- indeterminate : check box/option button whose toggle states cannot be determined (checked or unchecked)
+	- in-range : a field whose value lies within the allowed range (btwn min and max)
+	* invalid : a field whose value fails the validation test
+	- optional : a field that is not required
+	- out-of-range : a field whose value does not lie within the allowed range (btwn min and max)
+	- required : a field that is required
+	* valid : a field whose value passes validation test
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
